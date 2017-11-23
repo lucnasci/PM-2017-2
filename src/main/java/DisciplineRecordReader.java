@@ -12,12 +12,21 @@ public class DisciplineRecordReader {
 	
 	private DisciplineRecordReader() {};
 	
+	/**
+	 * @return an instance of DisciplineRecordReader, if it's the first time
+	 * it is called than the instance is intantiaded
+	 */
 	public static DisciplineRecordReader getInstance() {
 		if (reader == null)
 			reader = new DisciplineRecordReader();
 		return reader;
 	}
 	
+	/**
+	 * @param path of the pdf file to be readen
+	 * @return An array list of strings with the content of the pdf.
+	 * The array list is stripped by '\n'
+	 */
 	public ArrayList<String> readPdf(String path) {
 		ArrayList<String> documentLines = new ArrayList<>();
 		try (PDDocument document = PDDocument.load(new File("file.pdf"))) {
@@ -37,6 +46,11 @@ public class DisciplineRecordReader {
 		return documentLines;
 	}
 	
+	/**
+	 * @param path of the pdf file to be readen 
+	 * @return an array list of strings containg data about the disciplines, in the bellow pattern</br>
+	 * DISCIPLINE_CODE DISCIPLINE_NAME DISCIPLINE_RESULT DISCIPLINE_SEMESTER
+	 */
 	public ArrayList<String> getListOfDisciplines(String path){
 		ArrayList<String> documentLines = new ArrayList<>();
 		ArrayList<String> lines = readPdf(path);
