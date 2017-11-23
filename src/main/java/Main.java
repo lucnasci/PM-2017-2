@@ -1,7 +1,8 @@
-
 import java.io.IOException;
+
 import java.util.ArrayList;
-public class main {
+
+public class Main {
 
     public static void main(String[] args) throws IOException {
     	DisciplineRecordReader reader = DisciplineRecordReader.getInstance();
