@@ -1,9 +1,10 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.PDDocumentNameDictionary;
 import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
 import org.apache.pdfbox.text.PDFTextStripper;
 
@@ -71,6 +72,40 @@ public class DisciplineRecordReader {
 		return documentLines;
 	}
 	
+	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String path){
+		Map<String, DisciplineResultEnum> documentLines = new HashMap<>();
+		ArrayList<String> lines = readPdf(path);
+		int semesterCount = 0;
+		for (String line : lines) {
+			if (lineRefersToSemester(line))
+				semesterCount ++;
+			if (stringBeginsWithDisciplineCode(line)) {
+				for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
+					String resultAsText = result.getText();
+					if(stringHasResultWithThreeCharacters(line, resultAsText.charAt(0), resultAsText.charAt(1), resultAsText.charAt(2))) {
+						documentLines.put(getDisciplineCode(line), getDisciplineResult(line));
+					}
+				}				
+			}
+		}
+		return documentLines;
+	}
+	
+	public static String getDisciplineCode(String line) {
+		String code = "";
+		return line.substring(0, 7);
+	}
+	
+	public static DisciplineResultEnum getDisciplineResult(String line) {
+		for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
+			String resultAsText = result.getText();
+			if(stringHasResultWithThreeCharacters(line, resultAsText.charAt(0), resultAsText.charAt(1), resultAsText.charAt(2))) {
+				return result;
+			}
+		}
+		return DisciplineResultEnum.APROVADO;
+	}
+	
 	public static boolean lineRefersToSemester(String line) {
 		return line.contains("semestre de");
 	}
@@ -103,7 +138,7 @@ public class DisciplineRecordReader {
 	    	}
 	    	return true;
     	}
-    	return false;
-    }
+		return false;
+	}
 
 }

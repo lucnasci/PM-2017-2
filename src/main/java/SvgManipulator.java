@@ -16,7 +16,7 @@ public class SvgManipulator {
 		return manipulator;
 	}
 	
-	public Document getDocFromSvgPath(String path) {
+	public Document getDocumentFromSvgPath(String path) {
 		return reader.getDocFromSvgPath(path);
 	}
 	
