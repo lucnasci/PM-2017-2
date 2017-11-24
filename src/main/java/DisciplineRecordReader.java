@@ -30,7 +30,7 @@ public class DisciplineRecordReader {
 	 */
 	public ArrayList<String> readPdf(String path) {
 		ArrayList<String> documentLines = new ArrayList<>();
-		try (PDDocument document = PDDocument.load(new File("file.pdf"))) {
+		try (PDDocument document = PDDocument.load(new File("src/resources/file.pdf"))) {
             document.getClass();
             PDFTextStripper tStripper = new PDFTextStripper();
             String pdfFileInText = tStripper.getText(document);
@@ -110,12 +110,12 @@ public class DisciplineRecordReader {
 		return line.contains("semestre de");
 	}
 	
-	public static boolean stringHasResultWithThreeCharacters(String line, char charactertOne, char characterTwo, char characterThree) {
+	public static boolean stringHasResultWithThreeCharacters(String line, char characterOne, char characterTwo, char characterThree) {
 		for (int index = line.length() - 1; index >= 0; index = index - 1) {
     		char c = line.charAt(index);
     		if (c == characterThree) {
     			if (line.charAt(index - 1) == characterTwo) {
-    				if (line.charAt(index - 2) == charactertOne) {
+    				if (line.charAt(index - 2) == characterOne) {
     					return true;
     				}
     			}

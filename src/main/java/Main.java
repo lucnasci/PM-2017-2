@@ -14,7 +14,7 @@ public class Main {
 //		 ArrayList<String> lines = reader.getListOfDisciplines("file.pdf");
 		// lines.forEach(line -> System.out.println(line));
 		SvgManipulator svgManipulator = SvgManipulator.getInstance();
-		Document doc = svgManipulator.getDocumentFromSvgPath("grade_curricular.svg");
+		Document doc = svgManipulator.getDocumentFromSvgPath("src/resources/grade_curricular.svg");
 		// System.out.println(doc.getElementById("TIN0107"));
 		// String propriedade =
 		// "fill:#7B68EE;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1";
@@ -39,7 +39,10 @@ public class Main {
 		dises.forEach(di -> {
 			DisciplineResultEnum result = ma.get(di.getCode());
 			if (result != null)
+				svgManipulator.editSvgPathColor(doc, di.getCode(), "#333FFF");
 				System.out.println(di.getCode() + ": " + result);
 		});
+		
+		svgManipulator.writeSvgDoc(doc);
 	}
 }

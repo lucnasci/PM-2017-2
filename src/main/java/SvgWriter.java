@@ -21,7 +21,7 @@ public class SvgWriter {
 
 	public void writeSvgDoc(Document docToWrite) {
 		// Generate Output File
-		String savepath = "test.svg";
+		String savepath = "src/resources/test.svg";
 		byte[] fileData = null;
 		try {
 			fileData = transcodeToSVG(docToWrite);
