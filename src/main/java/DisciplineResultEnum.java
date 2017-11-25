@@ -7,7 +7,8 @@ public enum DisciplineResultEnum {
 	REPROVADO("REP"),
 	REPROVADO_POR_FALTA("REF"),
 	DISPENSADO_COM_NOTA("ADI"),
-	DISPENSADO_SEM_NOTA("DIS");
+	DISPENSADO_SEM_NOTA("DIS"),
+	NAO_CURSADA("");
 	
 	private String text;
 	

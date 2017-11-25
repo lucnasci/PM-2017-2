@@ -1,143 +1,259 @@
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-import org.apache.pdfbox.pdmodel.PDDocument;
-import org.apache.pdfbox.pdmodel.encryption.InvalidPasswordException;
-import org.apache.pdfbox.text.PDFTextStripper;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 public class DisciplineRecordReader {
 	private static DisciplineRecordReader reader = null;
-	
-	private DisciplineRecordReader() {};
-	
+
+	private DisciplineRecordReader() {
+	};
+
 	/**
-	 * @return an instance of DisciplineRecordReader, if it's the first time
-	 * it is called than the instance is intantiaded
+	 * @return an instance of DisciplineRecordReader, if it's the first time it is
+	 *         called than the instance is intantiaded
 	 */
 	public static DisciplineRecordReader getInstance() {
 		if (reader == null)
 			reader = new DisciplineRecordReader();
 		return reader;
 	}
-	
+
 	/**
-	 * @param path of the pdf file to be readen
-	 * @return An array list of strings with the content of the pdf.
-	 * The array list is stripped by '\n'
+	 * @param pdfPath
+	 *            of the pdf file to be readen
+	 * @return an array list of strings containg data about the disciplines, in the
+	 *         bellow pattern</br>
+	 *         DISCIPLINE_CODE DISCIPLINE_NAME DISCIPLINE_RESULT DISCIPLINE_SEMESTER
 	 */
-	public ArrayList<String> readPdf(String path) {
+	public ArrayList<String> getListOfDisciplines(String pdfPath) {
 		ArrayList<String> documentLines = new ArrayList<>();
-		try (PDDocument document = PDDocument.load(new File("src/resources/file.pdf"))) {
-            document.getClass();
-            PDFTextStripper tStripper = new PDFTextStripper();
-            String pdfFileInText = tStripper.getText(document);
-            for (String line : pdfFileInText.split("\\n")) {
-            	documentLines.add(line);
-            }
-        } catch (InvalidPasswordException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return documentLines;
-	}
-	
-	/**
-	 * @param path of the pdf file to be readen 
-	 * @return an array list of strings containg data about the disciplines, in the bellow pattern</br>
-	 * DISCIPLINE_CODE DISCIPLINE_NAME DISCIPLINE_RESULT DISCIPLINE_SEMESTER
-	 */
-	public ArrayList<String> getListOfDisciplines(String path){
-		ArrayList<String> documentLines = new ArrayList<>();
-		ArrayList<String> lines = readPdf(path);
+		ArrayList<String> lines = PdfReader.getInstance().readPdf(pdfPath);
 		int semesterCount = 0;
 		for (String line : lines) {
 			if (lineRefersToSemester(line))
-				semesterCount ++;
+				semesterCount++;
 			if (stringBeginsWithDisciplineCode(line)) {
 				for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
-					String resultAsText = result.getText();
-					if(stringHasResultWithThreeCharacters(line, resultAsText.charAt(0), resultAsText.charAt(1), resultAsText.charAt(2))) {
+					if (containsIgnoreCase(line, result.getText())) {
 						line = line + " periodo" + semesterCount;
 						documentLines.add(line);
 					}
-				}				
+				}
 			}
 		}
 		return documentLines;
 	}
-	
-	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String path){
+
+	/**
+	 * @param disciplineRecordPath
+	 *            to a pdf file with the students Discipline Record
+	 * @return
+	 */
+	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String disciplineRecordPath) {
 		Map<String, DisciplineResultEnum> documentLines = new HashMap<>();
-		ArrayList<String> lines = readPdf(path);
-		int semesterCount = 0;
+		ArrayList<String> lines = PdfReader.getInstance().readPdf(disciplineRecordPath);
 		for (String line : lines) {
-			if (lineRefersToSemester(line))
-				semesterCount ++;
 			if (stringBeginsWithDisciplineCode(line)) {
 				for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
-					String resultAsText = result.getText();
-					if(stringHasResultWithThreeCharacters(line, resultAsText.charAt(0), resultAsText.charAt(1), resultAsText.charAt(2))) {
+					if (containsIgnoreCase(line, result.getText())) {
 						documentLines.put(getDisciplineCode(line), getDisciplineResult(line));
 					}
-				}				
+				}
 			}
 		}
 		return documentLines;
 	}
-	
-	public static String getDisciplineCode(String line) {
-		String code = "";
-		return line.substring(0, 7);
+
+	/**
+	 * @param stringEntry
+	 * @param contentToFind
+	 * @return it the entered string contains the content to find, ignoring case
+	 *         sensitive
+	 */
+	public boolean containsIgnoreCase(String stringEntry, String contentToFind) {
+		if (contentToFind.equals(""))
+			return true;
+		if (stringEntry == null || contentToFind == null || stringEntry.equals(""))
+			return false;
+
+		Pattern pattern = Pattern.compile(contentToFind, Pattern.CASE_INSENSITIVE + Pattern.LITERAL);
+		Matcher matcher = pattern.matcher(stringEntry);
+		return matcher.find();
 	}
-	
-	public static DisciplineResultEnum getDisciplineResult(String line) {
-		for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
-			String resultAsText = result.getText();
-			if(stringHasResultWithThreeCharacters(line, resultAsText.charAt(0), resultAsText.charAt(1), resultAsText.charAt(2))) {
-				return result;
+
+	/**
+	 * @param line
+	 * @return if the 7 first letters of the line make a disciplineCode (PATTERN: 3
+	 *         characthers and 4 integers) return this code
+	 */
+	public String getDisciplineCode(String line) {
+		if (stringBeginsWithDisciplineCode(line))
+			return line.substring(0, 7);
+		return null;
+	}
+
+	/**
+	 * @param line
+	 * @return if the entered line referes to a discipline gets the result
+	 */
+	public DisciplineResultEnum getDisciplineResult(String line) {
+		if (stringBeginsWithDisciplineCode(line)) {
+			for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
+				if (containsIgnoreCase(line, result.getText())) {
+					return result;
+				}
 			}
 		}
-		return DisciplineResultEnum.APROVADO;
+		return null;
+	}
+
+	/**
+	 * @param line
+	 * @return if the line refers to a semester. To do so the line must containt the
+	 *         string "semestre de"
+	 */
+	public boolean lineRefersToSemester(String line) {
+		return containsIgnoreCase(line, "semestre de");
+	}
+
+	/**
+	 * Methods goes throught the line from the end to the begining checking if there
+	 * is a sequence of characters same as the result text
+	 * 
+	 * @param line
+	 * @param result
+	 * @return if there is a sequence of characters same as the result text
+	 */
+	public boolean stringHasResult(String line, DisciplineResultEnum result) {
+		return (containsIgnoreCase(line, result.getText()));
+	}
+
+	/**
+	 * @param line
+	 * @return if the begining of the line matches the pattern: 3 charachters and 4
+	 *         integers
+	 */
+	public static boolean stringBeginsWithDisciplineCode(String line) {
+		if (line.length() >= 7) {
+			for (int index = 0; index < 3; index++) {
+				char character = line.charAt(index);
+				if (!Character.isAlphabetic(character))
+					return false;
+			}
+			for (int index = 3; index < 7; index++) {
+				char character = line.charAt(index);
+				if (!Character.isDigit(character))
+					return false;
+			}
+			return true;
+		}
+		return false;
+	}
+
+	/**
+	 * @param svgPath
+	 * @return a list of disciplines based on the svg document. The disciplines have
+	 *         null as situation
+	 */
+	public ArrayList<Discipline> getListOfDisciplinesBasedOnSvg(String svgPath) {
+		SvgManipulator svgManipulator = SvgManipulator.getInstance();
+		Document gradeCurricularDocument = svgManipulator.getDocumentFromSvgPath(svgPath);
+		ArrayList<Discipline> disciplines = new ArrayList<>();
+		for (int index = 0; index < gradeCurricularDocument.getElementsByTagName("path").getLength(); index++) {
+			Element node = (Element) gradeCurricularDocument.getElementsByTagName("path").item(index);
+			for (int nodeIndex = 0; nodeIndex < node.getAttributes().getLength(); nodeIndex++) {
+				if (node.getAttributes().item(nodeIndex).getNodeName().equals("id")) {
+					String nodeTextContent = node.getAttributes().item(nodeIndex).getTextContent();
+					if (stringBeginsWithDisciplineCode(nodeTextContent)) {
+						disciplines.add(new Discipline(nodeTextContent, null));
+					} else if (stringRefersToOptionalDiscipline(nodeTextContent)) {
+						disciplines.add(new Discipline(nodeTextContent, null));
+					} else if (stringRefersToElectiveDiscipline(nodeTextContent)) {
+						disciplines.add(new Discipline(nodeTextContent, null));
+					}
+				}
+			}
+		}
+		return disciplines;
+	}
+
+	private boolean stringRefersToOptionalDiscipline(String nodeTextContent) {
+		return nodeTextContent.contains("OPTATIVA");
+	}
+
+	private boolean stringRefersToElectiveDiscipline(String nodeTextContent) {
+		return nodeTextContent.contains("ELETIVA");
+	}
+
+	public ArrayList<Discipline> getDisciplinesFromDisciplineRecord(ArrayList<Discipline> courseDisciplines,
+			String pdfPath) {
+		ArrayList<Discipline> studentDisciplines = new ArrayList<>();
+		Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult = getMapOfDisciplinesAndResult("file.pdf");
+		courseDisciplines.forEach(courseDiscipline -> {
+			DisciplineResultEnum result = mapDisciplineCodeAndResult.get(courseDiscipline.getCode());
+			result = result != null ? result : DisciplineResultEnum.NAO_CURSADA;
+			studentDisciplines.add(new Discipline(courseDiscipline.getCode(), result));
+			mapDisciplineCodeAndResult.remove(courseDiscipline.getCode());
+		});
+		HashMap<String, DisciplineResultEnum> hele = new HashMap<>();
+		hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
+		hele.put("TIN0152", mapDisciplineCodeAndResult.get("TIN0152"));
+		hele.put("TIN0153", mapDisciplineCodeAndResult.get("TIN0153"));
+		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));
+		ArrayList<String> ele = new ArrayList<>();
+		hele.keySet().forEach(key -> ele.add(key));
+		
+		mapDisciplineCodeAndResult.remove("TIN0151");
+		mapDisciplineCodeAndResult.remove("TIN0152");
+		mapDisciplineCodeAndResult.remove("TIN0153");
+		mapDisciplineCodeAndResult.remove("TIN0154");
+
+		studentDisciplines.forEach(d -> {
+			if (isEletiva(d)) {
+				if (!d.getSituation().equals(DisciplineResultEnum.APROVADO)) {
+					if (ele.size() > 0 && hele.size() > 0) {
+						String o = ele.get(0);
+						System.out.println(hele.get(o));
+						d.setSituation(hele.get(o));
+						hele.remove(o);
+						ele.remove(0);
+					}
+				}
+			}
+		});
+		
+		
+		ArrayList<String> opt = new ArrayList<>();
+		mapDisciplineCodeAndResult.keySet().forEach(key -> opt.add(key));
+		studentDisciplines.forEach(d -> {
+			if (isOptativa(d)) {
+				if (!d.getSituation().equals(DisciplineResultEnum.APROVADO)) {
+					if (opt.size() > 0 && mapDisciplineCodeAndResult.size() > 0) {
+						String o = opt.get(0);
+						d.setSituation(mapDisciplineCodeAndResult.get(o));
+						mapDisciplineCodeAndResult.remove(o);
+						opt.remove(0);
+					}
+				}
+			}
+		});
+		return studentDisciplines;
 	}
 	
-	public static boolean lineRefersToSemester(String line) {
-		return line.contains("semestre de");
+	public boolean isEletiva(Discipline discipline) {
+		if (discipline.getCode().contains("ELETIVA"))
+			return true;
+		return false;
 	}
-	
-	public static boolean stringHasResultWithThreeCharacters(String line, char characterOne, char characterTwo, char characterThree) {
-		for (int index = line.length() - 1; index >= 0; index = index - 1) {
-    		char c = line.charAt(index);
-    		if (c == characterThree) {
-    			if (line.charAt(index - 1) == characterTwo) {
-    				if (line.charAt(index - 2) == characterOne) {
-    					return true;
-    				}
-    			}
-    		}
-    	}
-    	return false;
-    }
-    
-    public static boolean stringBeginsWithDisciplineCode(String line) {
-    	if (line.length() >= 7) {
-	    	for (int index = 0; index < 3; index ++) {
-	    		char character = line.charAt(index);
-	    		if (!Character.isAlphabetic(character))
-	    			return false;
-	    	}
-	    	for (int index = 3; index < 7; index ++) {
-	    		char character = line.charAt(index);
-	    		if (!Character.isDigit(character))
-	    			return false;
-	    	}
-	    	return true;
-    	}
+
+	public boolean isOptativa(Discipline discipline) {
+		if (discipline.getCode().contains("OPTATIVA"))
+			return true;
 		return false;
 	}
 

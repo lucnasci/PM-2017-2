@@ -20,6 +20,29 @@ public class SvgManipulator {
 		return reader.getDocFromSvgPath(path);
 	}
 
+	public void paintDiscipine(Document documentToEdit, Discipline discipline) {
+		String color = "#FFF";
+		if (discipline.getCode().equalsIgnoreCase("tin0105")) {
+			System.out.println();
+		}
+		switch (discipline.getSituation()) {
+		case APROVADO:
+		case DISPENSADO_COM_NOTA:
+		case DISPENSADO_SEM_NOTA:
+			color = DisciplineResultColorEnum.APROVADO.getText();
+			break;
+		case REPROVADO:
+			color = DisciplineResultColorEnum.REPROVADO.getText();
+			break;
+		case MATRICULA:
+			color = DisciplineResultColorEnum.MATRICULA.getText();
+			break;
+		default:
+			break;
+		}
+		editSvgPathColor(documentToEdit, discipline.getCode(), color);
+	}
+
 	public void editSvgPathColor(Document docToEdit, String pathId, String color) {
 		docToEdit.getElementById(pathId).setAttribute("style", "fill:" + color
 				+ ";fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1");
