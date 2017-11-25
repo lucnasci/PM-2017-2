@@ -7,19 +7,19 @@ import java.util.regex.Pattern;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class DisciplineRecordReader {
-	private static DisciplineRecordReader reader = null;
+public class DisciplineManipulator {
+	private static DisciplineManipulator reader = null;
 
-	private DisciplineRecordReader() {
+	private DisciplineManipulator() {
 	};
 
 	/**
 	 * @return an instance of DisciplineRecordReader, if it's the first time it is
 	 *         called than the instance is intantiaded
 	 */
-	public static DisciplineRecordReader getInstance() {
+	public static DisciplineManipulator getInstance() {
 		if (reader == null)
-			reader = new DisciplineRecordReader();
+			reader = new DisciplineManipulator();
 		return reader;
 	}
 
