@@ -197,14 +197,12 @@ public class DisciplineManipulator {
 
 	public ArrayList<Discipline> getDisciplinesFromDisciplineRecord(ArrayList<Discipline> courseDisciplines,
 			String pdfPath) throws IOException {
-		ArrayList<Discipline> studentDisciplines = new ArrayList<>();
+		
+		
 		Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult = getMapOfDisciplinesAndResult(pdfPath);
-		courseDisciplines.forEach(courseDiscipline -> {
-			DisciplineResultEnum result = mapDisciplineCodeAndResult.get(courseDiscipline.getCode());
-			result = result != null ? result : DisciplineResultEnum.NAO_CURSADA;
-			studentDisciplines.add(new Discipline(courseDiscipline.getCode(), result));
-			mapDisciplineCodeAndResult.remove(courseDiscipline.getCode());
-		});
+		ArrayList<Discipline> studentDisciplines = getStudentDisciplinesWithResults(courseDisciplines,
+				mapDisciplineCodeAndResult);
+		
 		HashMap<String, DisciplineResultEnum> hele = new HashMap<>();
 		hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
 		hele.put("TIN0152", mapDisciplineCodeAndResult.get("TIN0152"));
@@ -212,19 +210,13 @@ public class DisciplineManipulator {
 		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));
 		ArrayList<String> ele = new ArrayList<>();
 		hele.keySet().forEach(key -> ele.add(key));
-		
-		hele.remove("TIN0151");
-		hele.remove("TIN0152");
-		hele.remove("TIN0153");
-		hele.remove("TIN0154");
 
-		studentDisciplines.forEach(d -> {
-			if (isEletiva(d)) {
-				if (!d.getSituation().equals(DisciplineResultEnum.APROVADO)) {
+		studentDisciplines.forEach(studentDiscipline -> {
+			if (isEletiva(studentDiscipline)) {
+				if (!studentDiscipline.getSituation().equals(DisciplineResultEnum.APROVADO)) {
 					if (ele.size() > 0 && hele.size() > 0) {
 						String o = ele.get(0);
-						System.out.println(hele.get(o));
-						d.setSituation(hele.get(o));
+						studentDiscipline.setSituation(hele.get(o));
 						hele.remove(o);
 						ele.remove(0);
 					}
@@ -262,4 +254,22 @@ public class DisciplineManipulator {
 		return false;
 	}
 
+	/**
+	 * Receives a list of the course's disciplines, a map with the discipline code and result
+	 * and returns a list with instanced disciplines
+	 * @param courseDisciplines
+	 * @param mapDisciplineCodeAndResult
+	 * @return a list of instanced disciplines
+	 */
+	public ArrayList<Discipline> getStudentDisciplinesWithResults(ArrayList<Discipline> courseDisciplines,
+			Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult) {
+		ArrayList<Discipline> studentDisciplines = new ArrayList<>();
+		courseDisciplines.forEach(courseDiscipline -> {
+			DisciplineResultEnum result = mapDisciplineCodeAndResult.get(courseDiscipline.getCode());
+			result = result != null ? result : DisciplineResultEnum.NAO_CURSADA;
+			studentDisciplines.add(new Discipline(courseDiscipline.getCode(), result));
+			mapDisciplineCodeAndResult.remove(courseDiscipline.getCode());
+		});
+		return studentDisciplines;
+	}
 }

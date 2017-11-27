@@ -2,6 +2,7 @@ package file.manipulator;
 import org.w3c.dom.Document;
 
 import enums.DisciplineResultColorEnum;
+import enums.DisciplineResultEnum;
 import model.Discipline;
 
 public class SvgManipulator {
@@ -26,23 +27,23 @@ public class SvgManipulator {
 
 	public void paintDiscipine(Document documentToEdit, Discipline discipline) {
 		String color = "#FFF";
-		if (discipline.getCode().equalsIgnoreCase("tin0105")) {
-			System.out.println();
-		}
-		switch (discipline.getSituation()) {
-		case APROVADO:
-		case DISPENSADO_COM_NOTA:
-		case DISPENSADO_SEM_NOTA:
-			color = DisciplineResultColorEnum.APROVADO.getText();
-			break;
-		case REPROVADO:
-			color = DisciplineResultColorEnum.REPROVADO.getText();
-			break;
-		case MATRICULA:
-			color = DisciplineResultColorEnum.MATRICULA.getText();
-			break;
-		default:
-			break;
+		DisciplineResultEnum disciplineSituation = discipline.getSituation();
+		if (disciplineSituation != null) {
+			switch (disciplineSituation) {
+			case APROVADO:
+			case DISPENSADO_COM_NOTA:
+			case DISPENSADO_SEM_NOTA:
+				color = DisciplineResultColorEnum.APROVADO.getText();
+				break;
+			case REPROVADO:
+				color = DisciplineResultColorEnum.REPROVADO.getText();
+				break;	
+			case MATRICULA:
+				color = DisciplineResultColorEnum.MATRICULA.getText();
+				break;
+			default:
+				break;
+			}
 		}
 		editSvgPathColor(documentToEdit, discipline.getCode(), color);
 	}

@@ -1,0 +1,912 @@
+
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg inkscape:export-xdpi="90" contentScriptType="text/ecmascript"
+     zoomAndPan="magnify"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:svg="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     id="svg2" sodipodi:docname="GRADE_~1.SVG" version="1.1"
+     inkscape:export-filename="/Users/gleison/Google Drive/academico/unirioDisciplinas/2017_2_bsi_programacao_modular/trabalho/grade_curricular v3.png"
+     width="297mm"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:cc="http://creativecommons.org/ns#"
+     preserveAspectRatio="xMidYMid meet" inkscape:version="0.92.1 r15371"
+     viewBox="0 0 1052.3622 744.09448" height="210mm"
+     xmlns="http://www.w3.org/2000/svg" inkscape:export-ydpi="90">
+    <defs id="defs4"/>
+    <sodipodi:namedview bordercolor="#666666" inkscape:window-height="989"
+                        inkscape:zoom="1.1060423"
+                        inkscape:snap-to-guides="false" id="base"
+                        inkscape:current-layer="layer1" inkscape:window-y="0"
+                        inkscape:cy="378.72925" inkscape:window-x="45"
+                        inkscape:cx="481.42694" showgrid="false"
+                        inkscape:snap-object-midpoints="true"
+                        inkscape:snap-grids="true" inkscape:pageopacity="0.0"
+                        inkscape:document-units="px" inkscape:snap-nodes="false"
+                        inkscape:pageshadow="2" inkscape:window-width="1702"
+                        inkscape:snap-page="false" inkscape:window-maximized="0"
+                        borderopacity="1.0" pagecolor="#ffffff"/>
+    <metadata id="metadata7">
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>
+                    image/svg+xml
+                </dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                <dc:title/>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g inkscape:groupmode="layer" id="layer1"
+       transform="translate(0,-308.26772)" inkscape:label="Camada 1">
+        <path inkscape:connector-curvature="0"
+              d="m 238.68888,686.19177 157.31766,-0.90412" id="path4700"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"/>
+        <path inkscape:connector-curvature="0"
+              d="m 70.521713,396.87192 c 142.851677,0 285.703347,0 428.555027,0 24.41136,0 48.82272,0 73.23409,0 7.83574,0 15.67149,0 23.50723,0 0.21928,0 2.6833,0.0291 2.71238,0 0.2131,-0.2131 -0.26956,-0.76935 0,-0.90412 0.43378,-0.2169 5.42475,0.18675 5.42475,0 0,-0.42621 -0.60275,-0.60275 -0.90413,-0.90413"
+              id="path4303"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 3.613225,370.67675 0,53.56837 105.147525,0 0,-53.56837 -105.147525,0 z"
+              id="TIN0107"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="46.153992" xml:space="preserve" id="text8581" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="46.153992" id="tspan8589" y="437.18167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0107</tspan><tspan x="47.911804"
+                   id="tspan3349" y="449.68167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Técnicas de </tspan><tspan x="47.911804"
+                   id="tspan3504" y="462.18167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Programação I </tspan></text>
+        <path id="TIN0011"
+              d="m 134.71128,370.67675 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="161.69084" id="text3622" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="161.69084" id="tspan3626" y="437.18167"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0011</tspan><tspan x="163.44865"
+                   id="tspan4420" y="449.68167" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Técnicas de </tspan><tspan x="163.44865"
+                   id="tspan3628" y="462.18167" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Programação II </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 265.80932,370.67675 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0114"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="277.22766" xml:space="preserve" id="text3634" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan3636" y="437.18167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0114</tspan><tspan x="278.98547"
+                   id="tspan3640" y="449.68167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Estruturas de </tspan><tspan x="278.98547"
+                   y="462.18167" id="tspan4455"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Dados 1 </tspan></text>
+        <path id="TIN0168"
+              d="m 396.9074,370.67675 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="392.76453" id="text3646" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="392.76453" id="tspan3652" y="437.18167"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0168</tspan><tspan x="392.76453"
+                   id="tspan4497" y="449.68167" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Estrutura de</tspan><tspan x="394.52234"
+                   id="tspan4499" y="462.18167" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Dados II </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 528.00545,370.67675 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0118"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="508.30139" xml:space="preserve" id="text3658" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan3662" y="437.18167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0118</tspan><tspan x="508.30139"
+                   id="tspan3664" y="449.68167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Análise de</tspan><tspan x="508.30139"
+                   y="462.18167" id="tspan4538"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Algoritmos</tspan></text>
+        <path id="OPTATIVA_01"
+              d="m 659.10347,370.67675 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="623.8382" id="text3670" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="623.8382" id="tspan3676" y="437.18167"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">OPTATIVA 01</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 790.20153,370.67675 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="OPTATIVA_03"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#OPTATIVA_03"/>
+        <text x="739.37506" xml:space="preserve" id="text3682" y="437.18167"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="739.37506" id="tspan3688" y="437.18167"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">OPTATIVA 03</tspan></text>
+        <path id="OPTATIVA_06"
+              d="m 921.29963,369.77263 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#OPTATIVA_06"/>
+        <text xml:space="preserve" x="854.91193" id="text3694" y="436.15579"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan3700" y="436.15579"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">OPTATIVA 06</tspan></text>
+        <path id="TIN0106"
+              d="m 3.613225,442.85601 0,53.56837 105.147525,0 0,-53.56837 -105.147525,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#path3704"/>
+        <text xml:space="preserve" x="46.153992" id="text3706" y="519.08246"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="46.153992" id="tspan3708" y="519.08246"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0106</tspan><tspan x="47.911804"
+                   id="tspan3712" y="531.58246" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">  Desenvolvimento </tspan><tspan x="47.911804"
+                   id="tspan4387" y="544.08246" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">de Páginas WEB </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 134.71128,442.85601 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0013"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="161.69084" xml:space="preserve" id="text3718" y="519.08246"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="161.69084" id="tspan3720" y="519.08246"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0013</tspan><tspan x="163.44865"
+                   id="tspan3724" y="531.58246"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Análise </tspan><tspan x="163.44865"
+                   y="544.08246" id="tspan4424"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Empresarial e </tspan><tspan x="163.44865"
+                   y="556.58246" id="tspan4426"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Administrativa </tspan></text>
+        <path id="TIN0120"
+              d="m 265.80932,442.85601 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="277.22766" id="text3730" y="519.08246"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan3732" y="519.08246"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0120</tspan><tspan x="278.98547"
+                   id="tspan3736" y="531.58246" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Banco de </tspan><tspan x="278.98547"
+                   id="tspan4459" y="544.08246" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Dados I </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 396.9074,442.85601 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="ELETIVA_02"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="392.76453" xml:space="preserve" id="text3742" y="519.08246"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="392.76453" id="tspan3748" y="519.08246"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">ELETIVA 02</tspan></text>
+        <path id="TIN0130"
+              d="m 528.00545,442.85607 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="508.30139" id="text3754" y="519.08258"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan3760" y="519.08258"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0130</tspan><tspan x="508.30139"
+                   id="tspan4545" y="531.58258" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Empreende-</tspan><tspan x="510.0592"
+                   id="tspan4547" y="544.08258" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">dorismo </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 659.10347,442.85607 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="OPTATIVA_02"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="623.8382" xml:space="preserve" id="text3766" y="519.08258"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="623.8382" y="519.08258" id="tspan4636"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">OPTATIVA 02</tspan></text>
+        <path id="OPTATIVA_04"
+              d="m 790.20153,442.85607 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="739.37506" id="text3778" y="519.08258"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="739.37506" id="tspan3784" y="519.08258"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">OPTATIVA 04</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 921.29963,441.95189 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              id="OPTATIVA_07"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="854.91193" xml:space="preserve" id="text3790" y="518.05658"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan3796" y="518.05658"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">OPTATIVA 07</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 3.613225,515.03525 0,53.56837 105.147525,0 0,-53.56837 -105.147525,0 z"
+              id="TIN0112"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="46.153992" xml:space="preserve" id="text3802" y="600.98328"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="46.153992" id="tspan3804" y="600.98328"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0112</tspan><tspan x="46.153992"
+                   id="tspan3808" y="613.48328"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Fundamentos de</tspan><tspan x="47.911804"
+                   y="625.98328" id="tspan4391"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Sistemas de </tspan><tspan x="47.911804"
+                   y="638.48328" id="tspan4393"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Informação </tspan></text>
+        <path id="TIN0110"
+              d="m 134.71128,515.03525 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#TIN0110"/>
+        <text xml:space="preserve" x="161.69084" id="text3814" y="600.98328"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="161.69084" id="tspan3816" y="600.98328"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0010</tspan><tspan x="163.44865"
+                   id="tspan3820" y="613.48328" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Interação </tspan><tspan x="161.69084"
+                   id="tspan4430" y="625.98328" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Humano-</tspan><tspan x="163.44865"
+                   id="tspan4432" y="638.48328" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Computador </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 265.80932,515.03525 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="ELETIVA_01"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#ELETIVA_01"/>
+        <text x="277.22766" xml:space="preserve" id="text3826" y="600.98328"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan3832" y="600.98328"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">ELETIVA 01</tspan></text>
+        <path id="TIN0115"
+              d="m 396.9074,515.03525 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="392.76453" id="text3838" y="600.98328"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="392.76453" id="tspan3840" y="600.98328"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0115</tspan><tspan x="394.52234"
+                   id="tspan3844" y="613.48328" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Análise de </tspan><tspan x="394.52234"
+                   id="tspan4508" y="625.98328" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Sistemas </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 528.00545,515.03531 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0169"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="508.30139" xml:space="preserve" id="text3850" y="600.98334"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan3856" y="600.98334"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0169</tspan><tspan x="510.0592"
+                   y="613.48334" id="tspan4554"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Banco de </tspan><tspan x="508.30139"
+                   y="625.98334" id="tspan4556"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Dados II</tspan></text>
+        <path id="TIN0117"
+              d="m 659.10347,515.03531 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="623.8382" id="text3862" y="600.98334"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="623.8382" id="tspan3868" y="600.98334"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0117</tspan><tspan x="623.8382"
+                   id="tspan4676" y="613.48334" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Administração</tspan><tspan x="625.59601"
+                   id="tspan4678" y="625.98334" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Financeira </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 790.20153,515.03531 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0131"
+              style="fill:#FFDA00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="739.37506" xml:space="preserve" id="text3874" y="600.98334"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="739.37506" id="tspan3880" y="600.98334"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0131</tspan><tspan x="741.13287"
+                   y="613.48334" id="tspan4729"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Projeto de </tspan><tspan x="739.37506"
+                   y="625.98334" id="tspan4731"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Graduação I</tspan></text>
+        <path id="OPTATIVA_08"
+              d="m 921.29963,514.13113 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="854.91193" id="text3886" y="599.9574"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan3892" y="599.9574"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">OPTATIVA 08</tspan></text>
+        <path id="TIN0108"
+              d="m 3.613225,587.21456 0,53.56837 105.147525,0 0,-53.56837 -105.147525,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="46.153992" id="text3898" y="682.88416"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="46.153992" id="tspan3900" y="682.88416"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0108</tspan><tspan x="46.153992"
+                   id="tspan3904" y="695.38416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Organização</tspan><tspan x="47.911804"
+                   id="tspan4397" y="707.88416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">de </tspan><tspan x="47.911804"
+                   id="tspan4399" y="720.38416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Computadores </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 134.71128,587.21456 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TME0015"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="161.69084" xml:space="preserve" id="text3910" y="682.88416"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="161.69084" id="tspan3912" y="682.88416"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TME0015</tspan><tspan x="161.69084"
+                   id="tspan3916" y="695.38416"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Álgebra Linear</tspan></text>
+        <path id="TIN0116"
+              d="m 265.80932,587.21456 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="277.22766" id="text3922" y="682.88416"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan3924" y="682.88416"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0116</tspan><tspan x="278.98547"
+                   id="tspan3928" y="695.38416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Sistemas </tspan><tspan x="278.98547"
+                   id="tspan4468" y="707.88416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Operacionais </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 396.9074,587.21456 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0123"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="392.76453" xml:space="preserve" id="text3934" y="682.88416"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="392.76453" id="tspan3940" y="682.88416"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0123</tspan><tspan x="394.52234"
+                   y="695.38416" id="tspan4517"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Redes de </tspan><tspan x="392.76453"
+                   y="707.88416" id="tspan4515"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Computadores 1</tspan></text>
+        <path id="TIN0126"
+              d="m 528.00545,587.21459 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="508.30139" id="text3946" y="682.88416"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan3948" y="682.88416"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0126</tspan><tspan x="508.30139"
+                   id="tspan3952" y="695.38416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Redes de</tspan><tspan x="510.0592"
+                   id="tspan4560" y="707.88416" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Computadores 2 </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 659.10347,587.21459 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0125"
+              style="fill:#FFDA00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="623.8382" xml:space="preserve" id="text3958" y="676.07611"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="623.8382" id="tspan3964" y="676.07611"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0125</tspan><tspan x="625.59601"
+                   y="688.57611" id="tspan4693"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Projeto e </tspan><tspan x="623.8382"
+                   id="tspan4709" y="701.07611"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Construção de</tspan><tspan x="625.59601"
+                   y="713.57611" id="tspan4689"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Sistemas </tspan><tspan x="623.8382"
+                   id="tspan4705" y="726.07611"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">com SGBD</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 921.29963,586.31044 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              id="TIN0133"
+              style="fill:#FFF;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#TIN0133"/>
+        <text x="854.91193" xml:space="preserve" id="text3982" y="681.85822"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan3988" y="681.85822"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0133</tspan><tspan x="856.66974"
+                   y="694.35822" id="tspan4738"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Projeto de </tspan><tspan x="854.91193"
+                   y="706.85822" id="tspan4740"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Graduação II</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 3.613225,659.39382 0,53.56837 105.147525,0 0,-53.56837 -105.147525,0 z"
+              id="HTD0058"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="46.153992" xml:space="preserve" id="text3994" y="764.78491"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="47.911804" id="tspan3998" y="764.78491"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">HTD0058 </tspan><tspan x="46.153992"
+                   id="tspan4000" y="777.28491"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">  Teorias e Práticas</tspan><tspan x="46.153992"
+                   y="789.78491" id="tspan4407"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Discursivas</tspan></text>
+        <path id="TIN0105"
+              d="m 134.71128,659.39382 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="161.69084" id="text4006" y="764.78491"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="161.69084" id="tspan4008" y="764.78491"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0105</tspan><tspan x="161.69084"
+                   id="tspan4012" y="777.28491" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Introdução à</tspan><tspan x="161.69084"
+                   id="tspan4438" y="789.78491" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Lógica</tspan><tspan x="163.44865"
+                   id="tspan4440" y="802.28491" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Computacional </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 265.80932,659.39382 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0109"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="277.22766" xml:space="preserve" id="text4018" y="764.78491"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan4020" y="764.78491"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0109</tspan><tspan x="277.22766"
+                   id="tspan4022" y="777.28491"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Estruturas</tspan><tspan x="277.22766"
+                   id="tspan4024" y="789.78491"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Discretas</tspan></text>
+        <path id="TIN0119"
+              d="m 396.9074,659.39382 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="392.76453" id="text4030" y="764.78491"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="392.76453" id="tspan4032" y="764.78491"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0119</tspan><tspan x="394.52234"
+                   id="tspan4036" y="777.28491" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Linguagens </tspan><tspan x="394.52234"
+                   id="tspan4521" y="789.78491" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Formais e </tspan><tspan x="394.52234"
+                   id="tspan4523" y="802.28491" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Autômatos </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 528.00545,659.39388 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0171"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="508.30139" xml:space="preserve" id="text4042" y="764.78497"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan4044" y="764.78497"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0171</tspan><tspan x="508.30139"
+                   id="tspan4048" y="777.28497"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Projeto e</tspan><tspan x="508.30139"
+                   y="789.78497" id="tspan4564"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Construção de</tspan><tspan x="510.0592"
+                   y="802.28497" id="tspan4566"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Sistemas </tspan></text>
+        <path id="TIN0121"
+              d="m 659.10347,659.39388 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#FFDA00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="623.8382" id="text4054" y="764.78497"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="623.8382" id="tspan4056" y="764.78497"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0121</tspan><tspan x="625.59601"
+                   id="tspan4060" y="777.28497" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Programação </tspan><tspan x="625.59601"
+                   id="tspan4722" y="789.78497" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Modular </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 790.20153,659.39388 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0122"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="739.37506" xml:space="preserve" id="text4066" y="764.78497"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="739.37506" id="tspan4072" y="764.78497"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0122</tspan><tspan x="739.37506"
+                   y="777.28497" id="tspan4747"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Processos de</tspan><tspan x="741.13287"
+                   y="789.78497" id="tspan4749"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Software </tspan></text>
+        <path id="TIN0132"
+              d="m 921.29963,658.4897 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#FFF;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="854.91193" id="text4078" y="763.75903"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan4084" y="763.75903"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0132</tspan><tspan x="854.91193"
+                   id="tspan4756" y="776.25903" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Gerência de</tspan><tspan x="854.91193"
+                   id="tspan4758" y="788.75903" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Projetos em</tspan><tspan x="856.66974"
+                   id="tspan4760" y="801.25903" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Informática </tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 86.795955,756.71349 c 14.164615,0 28.329235,0 42.493855,0 38.57598,0 77.15196,0 115.72794,0 18.68524,0 37.37048,0 56.05572,0 7.75845,0 12.93597,0 17.17836,0 1.80825,0 3.6165,0 5.42475,0 0.30138,0 0.90413,-0.30138 0.90413,0 0,0.30137 -0.60275,0 -0.90413,0"
+              id="path4339"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path id="TME0101"
+              d="m 3.613225,731.5731 0,53.56837 105.147525,0 0,-53.56837 -105.147525,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              inkscape:label="#path4088"/>
+        <text xml:space="preserve" x="46.153992" id="text4090" y="846.68573"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="46.153992" id="tspan4092" y="846.68573"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TME0101</tspan><tspan x="46.153992"
+                   id="tspan4409" y="859.18573" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Matemática</tspan><tspan x="46.153992"
+                   id="tspan4096" y="871.68573" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Básica</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 134.71128,731.5731 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TME0112"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="161.69084" xml:space="preserve" id="text4102" y="846.68573"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="161.69084" id="tspan4108" y="846.68573"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TME0112</tspan><tspan x="163.44865"
+                   y="859.18573" id="tspan4447"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Cálculo </tspan><tspan x="163.44865"
+                   y="871.68573" id="tspan4451"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Diferencial e </tspan><tspan x="161.69084"
+                   y="884.18573" id="tspan4449"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Integral I</tspan></text>
+        <path id="TME0113"
+              d="m 265.80932,731.5731 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="277.22766" id="text4114" y="846.68573"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan4120" y="846.68573"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TME0113</tspan><tspan x="277.22766"
+                   id="tspan4479" y="859.18573" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Cálculo</tspan><tspan x="278.98547"
+                   id="tspan4481" y="871.68573" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Diferencial e </tspan><tspan x="277.22766"
+                   id="tspan4483" y="884.18573" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Integral II</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 396.9074,731.5731 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TME0115"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="392.76453" xml:space="preserve" id="text4126" y="846.68573"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="392.76453" id="tspan4132" y="846.68573"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TME0115</tspan><tspan x="392.76453"
+                   y="859.18573" id="tspan4530"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Estatística</tspan></text>
+        <path id="TIN0054"
+              d="m 528.00545,731.57313 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#FFDA00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="508.30139" id="text4138" y="846.68579"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan4140" y="846.68579"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"> TIN0054</tspan><tspan x="508.30139"
+                   id="tspan4144" y="859.18579" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Atividades</tspan><tspan x="508.30139"
+                   id="tspan4570" y="871.68579" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Curriculares de</tspan><tspan x="508.30139"
+                   id="tspan4572" y="884.18579" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Extensão 1</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 659.10347,731.57313 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TIN0055"
+              style="fill:#FFDA00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="623.8382" xml:space="preserve" id="text4150" y="846.68579"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="623.8382" id="tspan4156" y="846.68579"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TIN0055</tspan><tspan x="623.8382"
+                   y="859.18579" id="tspan4579"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Atividades</tspan><tspan x="623.8382"
+                   y="871.68579" id="tspan4581"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Curriculares de</tspan><tspan x="623.8382"
+                   y="884.18579" id="tspan4583"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Extensão 2</tspan></text>
+        <path id="TIN0056"
+              d="m 790.20153,731.57313 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#FFF;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="739.37506" id="text4162" y="846.68579"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="739.37506" id="tspan4168" y="846.68579"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">TIN0056</tspan><tspan x="739.37506"
+                   id="tspan4590" y="859.18579" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Atividades</tspan><tspan x="739.37506"
+                   id="tspan4592" y="871.68579" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Curriculares de</tspan><tspan x="739.37506"
+                   id="tspan4594" y="884.18579" sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">Extensão 3</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 921.29963,730.66898 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              id="TIN0057"
+              style="fill:#FFF;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="854.91193" xml:space="preserve" id="text4174" y="845.65985"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan4180" y="845.65985"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">TIN0057</tspan><tspan x="854.91193"
+                   y="858.15985" id="tspan4601"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Atividades</tspan><tspan x="854.91193"
+                   y="870.65985" id="tspan4603"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Curriculares de</tspan><tspan x="854.91193"
+                   y="883.15985" id="tspan4605"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Extensão 4</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 265.80932,803.7524 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="TME0114"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="277.22766" xml:space="preserve" id="text4210" y="928.58661"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="277.22766" id="tspan4216" y="928.58661"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line"> TME0114</tspan><tspan x="277.22766"
+                   y="941.08661" id="tspan4490"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">Probabilidade</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 528.00545,803.7524 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="ELETIVA_03"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="508.30139" xml:space="preserve" id="text4234" y="928.58661"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="508.30139" id="tspan4240" y="928.58661"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">ELETIVA 03</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 790.20153,803.7524 0,53.56837 105.14752,0 0,-53.56837 -105.14752,0 z"
+              id="OPTATIVA_05"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text x="739.37506" xml:space="preserve" id="text4258" y="928.58661"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="739.37506" id="tspan4264" y="928.58661"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle"
+                   sodipodi:role="line">OPTATIVA 05</tspan></text>
+        <path id="ELETIVA_04"
+              d="m 921.29963,802.84828 0,53.56837 105.14757,0 0,-53.56837 -105.14757,0 z"
+              inkscape:connector-curvature="0"
+              style="fill:#94EF00;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <text xml:space="preserve" x="854.91193" id="text4270" y="927.56073"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+              transform="scale(1.1346861,0.881301)">
+            <tspan x="854.91193" id="tspan4276" y="927.56073"
+                   sodipodi:role="line"
+                   style="font-size:10px;line-height:1.25;text-align:center;text-anchor:middle">ELETIVA 04</tspan></text>
+        <text x="30.740234" xml:space="preserve" id="text4305" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="30.740234" y="349.85745" id="tspan4307"
+                   style="font-size:12.5px;line-height:1.25"
+                   sodipodi:role="line">PRIMEIRO</tspan></text>
+        <text xml:space="preserve" x="816.55365" id="text4309" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="816.55365" id="tspan4311" y="349.85745"
+                   sodipodi:role="line"
+                   style="font-size:12.5px;line-height:1.25">SÉTIMO</tspan></text>
+        <text x="685.58472" xml:space="preserve" id="text4313" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="685.58472" y="349.85745" id="tspan4315"
+                   style="font-size:12.5px;line-height:1.25"
+                   sodipodi:role="line">SEXTO</tspan></text>
+        <text xml:space="preserve" x="554.61584" id="text4317" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="554.61584" id="tspan4319" y="349.85745"
+                   sodipodi:role="line"
+                   style="font-size:12.5px;line-height:1.25">QUINTO</tspan></text>
+        <text x="423.64694" xml:space="preserve" id="text4321" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="423.64694" y="349.85745" id="tspan4323"
+                   style="font-size:12.5px;line-height:1.25"
+                   sodipodi:role="line">QUARTO</tspan></text>
+        <text xml:space="preserve" x="292.67804" id="text4325" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="292.67804" id="tspan4327" y="349.85745"
+                   sodipodi:role="line"
+                   style="font-size:12.5px;line-height:1.25">TERCEIRO</tspan></text>
+        <text x="161.70914" xml:space="preserve" id="text4329" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="161.70914" y="349.85745" id="tspan4331"
+                   style="font-size:12.5px;line-height:1.25"
+                   sodipodi:role="line">SEGUNDO</tspan></text>
+        <text xml:space="preserve" x="947.52258" id="text4333" y="349.85745"
+              style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+            <tspan x="947.52258" id="tspan4335" y="349.85745"
+                   sodipodi:role="line"
+                   style="font-size:12.5px;line-height:1.25">OITAVO</tspan></text>
+        <path inkscape:connector-curvature="0"
+              d="m 122.05681,755.80936 0,73.12042 143.7558,1.44793"
+              id="path4690"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.89483821px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 370.69106,829.04345 9.94537,0.90412 0.90412,-71.42583 15.37012,0 0,0 -0.90413,0.90412"
+              id="path4692"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 108.49494,540.62772 11.75362,0 0,39.78148 264.90849,-0.90412 0.90412,-43.39798 10.8495,-0.90412"
+              id="path4694"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 500.88499,542.43597 13.56187,-0.90412 -0.90413,142.85167 15.37012,-0.90412"
+              id="path4696"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 252.25074,395.9678 0,325.48483 324.58071,0 -0.90412,-9.04125"
+              id="path4698"
+              style="fill:none;fill-rule:evenodd;stroke:#0000bb;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"/>
+        <path inkscape:connector-curvature="0"
+              d="m 108.49494,615.67006 13.56187,0 -0.90412,37.06911 199.81152,-0.90413 0,-10.84949"
+              id="path4702"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 184.4414,496.32562 -0.90412,11.75362 537.04997,-0.90412 -0.90412,7.23299"
+              id="path4704"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 514.44686,506.27099 -0.90413,-39.78148 14.466,-0.90412"
+              id="path4706"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 252.25074,462.87301 14.466,0" id="path4708"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 368.88281,611.14944 28.02786,-0.90413" id="path4712"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 501.78911,613.86181 26.21962,-0.90412" id="path4714"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 505.40561,396.87192 0.90413,131.09806 23.50723,-0.90412"
+              id="path4716"
+              style="fill:none;fill-rule:evenodd;stroke:#0000d9;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"/>
+        <path inkscape:connector-curvature="0"
+              d="m 631.98305,540.62772 14.46599,-0.90412 -0.90413,76.85058 14.466,0"
+              id="path4718"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 631.98305,687.0959 28.02786,0" id="path4720"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 644.64079,686.19177 -0.90412,-55.15159 15.37011,0"
+              id="path4722"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 643.73667,654.54741 136.5228,-0.90412 0,38.87736 9.94537,0"
+              id="path4724"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 780.25947,653.64329 128.38568,0.90412 0,35.26086 12.65775,-0.90412"
+              id="path4726"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 894.17916,540.62772 10.84949,-0.90412 -0.90412,77.75471 17.17837,-0.90413"
+              id="path4728"
+              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"/>
+        <path inkscape:connector-curvature="0"
+              d="m 370.69106,469.20189 12.65774,0 0,32.54848 122.05681,0"
+              id="path4730"
+              style="fill:none;fill-rule:evenodd;stroke:#0000bd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"/>
+    </g>
+</svg>

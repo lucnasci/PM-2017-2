@@ -30,7 +30,6 @@ public class SvgWriter {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(fileData.toString());
 		FileOutputStream fileSave = null;
 		try {
 			fileSave = new FileOutputStream(savepath);

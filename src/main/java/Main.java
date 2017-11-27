@@ -17,8 +17,7 @@ public class Main {
 
 		ArrayList<Discipline> courseDisciplines = disciplineManipulator.getListOfDisciplinesBasedOnSvg(svgPath);
 		ArrayList<Discipline> studentDisciplines = disciplineManipulator
-				.getDisciplinesFromDisciplineRecord(courseDisciplines, "src/resources/file_2.pdf");
-		studentDisciplines.forEach(d -> System.out.println(d.getCode() + ": " + d.getSituation()));
+				.getDisciplinesFromDisciplineRecord(courseDisciplines, "src/resources/file.pdf");
 		SvgManipulator svgManipulator = SvgManipulator.getInstance();
 		Document doc = svgManipulator.getDocumentFromSvgPath(svgPath);
 		studentDisciplines.forEach(d -> svgManipulator.paintDiscipine(doc, d));
