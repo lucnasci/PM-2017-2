@@ -218,7 +218,6 @@ public class DisciplineManipulator {
 				if (!d.getSituation().equals(DisciplineResultEnum.APROVADO)) {
 					if (ele.size() > 0 && hele.size() > 0) {
 						String o = ele.get(0);
-						System.out.println(hele.get(o));
 						d.setSituation(hele.get(o));
 						hele.remove(o);
 						ele.remove(0);
