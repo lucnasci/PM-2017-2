@@ -1,4 +1,5 @@
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,8 +16,8 @@ public class DisciplineManipulator {
 	};
 
 	/**
-	 * @return an instance of DisciplineRecordReader, if it's the first time it is
-	 *         called than the instance is intantiaded
+	 * @return an instance of DisciplineManipulator, if it's the first time it
+	 *         is called than the instance is instantiated.
 	 */
 	public static DisciplineManipulator getInstance() {
 		if (reader == null)

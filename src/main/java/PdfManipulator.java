@@ -5,12 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class PdfManipulator {
-	private static PdfManipulator reader = null;
+	private static PdfManipulator pdfManipulator = null;
 
 	public static PdfManipulator getInstance() {
-		if (reader == null)
-			reader = new PdfManipulator();
-		return reader;
+		if (pdfManipulator == null)
+			pdfManipulator = new PdfManipulator();
+		return pdfManipulator;
 	}
 
 	public ArrayList<String> extractTextFromPdf(String filePath) throws IOException {
