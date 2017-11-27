@@ -1,4 +1,5 @@
 import java.io.IOException;
+
 import java.util.ArrayList;
 
 import org.w3c.dom.Document;
@@ -12,7 +13,7 @@ public class Main {
 
 		ArrayList<Discipline> courseDisciplines = disciplineManipulator.getListOfDisciplinesBasedOnSvg(svgPath);
 		ArrayList<Discipline> studentDisciplines = disciplineManipulator
-				.getDisciplinesFromDisciplineRecord(courseDisciplines, "file.pdf");
+				.getDisciplinesFromDisciplineRecord(courseDisciplines, "src/resources/file_2.pdf");
 		studentDisciplines.forEach(d -> System.out.println(d.getCode() + ": " + d.getSituation()));
 		SvgManipulator svgManipulator = SvgManipulator.getInstance();
 		Document doc = svgManipulator.getDocumentFromSvgPath(svgPath);

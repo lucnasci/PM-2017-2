@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,21 +30,19 @@ public class DisciplineManipulator {
 	 * @return an array list of strings containg data about the disciplines, in the
 	 *         bellow pattern</br>
 	 *         DISCIPLINE_CODE DISCIPLINE_NAME DISCIPLINE_RESULT DISCIPLINE_SEMESTER
+	 * @throws IOException 
 	 */
-	public ArrayList<String> getListOfDisciplines(String pdfPath) {
+	public ArrayList<String> getListOfDisciplines(String pdfPath) throws IOException {
 		ArrayList<String> documentLines = new ArrayList<>();
-		ArrayList<String> lines = PdfReader.getInstance().readPdf(pdfPath);
+		ArrayList<String> lines = PdfManipulator.getInstance().extractTextFromPdf(pdfPath);
 		int semesterCount = 0;
 		for (String line : lines) {
-			if (lineRefersToSemester(line))
+			if (line.contains("semestre de")) {
 				semesterCount++;
+			}
 			if (stringBeginsWithDisciplineCode(line)) {
-				for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
-					if (containsIgnoreCase(line, result.getText())) {
-						line = line + " periodo" + semesterCount;
-						documentLines.add(line);
-					}
-				}
+				line = semesterCount + "º Periodo - " + line;
+				documentLines.add(line);
 			}
 		}
 		return documentLines;
@@ -53,10 +52,11 @@ public class DisciplineManipulator {
 	 * @param disciplineRecordPath
 	 *            to a pdf file with the students Discipline Record
 	 * @return
+	 * @throws IOException 
 	 */
-	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String disciplineRecordPath) {
+	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String disciplineRecordPath) throws IOException {
 		Map<String, DisciplineResultEnum> documentLines = new HashMap<>();
-		ArrayList<String> lines = PdfReader.getInstance().readPdf(disciplineRecordPath);
+		ArrayList<String> lines = PdfManipulator.getInstance().extractTextFromPdf(disciplineRecordPath);
 		for (String line : lines) {
 			if (stringBeginsWithDisciplineCode(line)) {
 				for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
@@ -191,9 +191,9 @@ public class DisciplineManipulator {
 	}
 
 	public ArrayList<Discipline> getDisciplinesFromDisciplineRecord(ArrayList<Discipline> courseDisciplines,
-			String pdfPath) {
+			String pdfPath) throws IOException {
 		ArrayList<Discipline> studentDisciplines = new ArrayList<>();
-		Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult = getMapOfDisciplinesAndResult("file.pdf");
+		Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult = getMapOfDisciplinesAndResult(pdfPath);
 		courseDisciplines.forEach(courseDiscipline -> {
 			DisciplineResultEnum result = mapDisciplineCodeAndResult.get(courseDiscipline.getCode());
 			result = result != null ? result : DisciplineResultEnum.NAO_CURSADA;
@@ -201,17 +201,17 @@ public class DisciplineManipulator {
 			mapDisciplineCodeAndResult.remove(courseDiscipline.getCode());
 		});
 		HashMap<String, DisciplineResultEnum> hele = new HashMap<>();
-		hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
+		/*hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
 		hele.put("TIN0152", mapDisciplineCodeAndResult.get("TIN0152"));
 		hele.put("TIN0153", mapDisciplineCodeAndResult.get("TIN0153"));
-		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));
+		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));*/
 		ArrayList<String> ele = new ArrayList<>();
 		hele.keySet().forEach(key -> ele.add(key));
 		
-		mapDisciplineCodeAndResult.remove("TIN0151");
-		mapDisciplineCodeAndResult.remove("TIN0152");
-		mapDisciplineCodeAndResult.remove("TIN0153");
-		mapDisciplineCodeAndResult.remove("TIN0154");
+		/*hele.remove("TIN0151");
+		hele.remove("TIN0152");
+		hele.remove("TIN0153");
+		hele.remove("TIN0154");*/
 
 		studentDisciplines.forEach(d -> {
 			if (isEletiva(d)) {
