@@ -1,4 +1,6 @@
+package model;
 
+import enums.DisciplineResultEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

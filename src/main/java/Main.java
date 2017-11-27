@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 import org.w3c.dom.Document;
 
+import file.manipulator.SvgManipulator;
+import model.Discipline;
+import model.DisciplineManipulator;
+
 public class Main {
 
 	public static void main(String[] args) throws IOException {

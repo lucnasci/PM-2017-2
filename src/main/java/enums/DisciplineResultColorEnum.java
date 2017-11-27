@@ -1,3 +1,4 @@
+package enums;
 
 public enum DisciplineResultColorEnum {
 	APROVADO("#94EF00"), REPROVADO("#FF1800"), MATRICULA("#FFDA00");
