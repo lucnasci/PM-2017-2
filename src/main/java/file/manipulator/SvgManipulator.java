@@ -1,4 +1,8 @@
+package file.manipulator;
 import org.w3c.dom.Document;
+
+import enums.DisciplineResultColorEnum;
+import model.Discipline;
 
 public class SvgManipulator {
 

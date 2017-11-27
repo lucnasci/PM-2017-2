@@ -1,3 +1,4 @@
+package model;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,6 +8,10 @@ import java.util.regex.Pattern;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+
+import enums.DisciplineResultEnum;
+import file.manipulator.PdfManipulator;
+import file.manipulator.SvgManipulator;
 
 public class DisciplineManipulator {
 	private static DisciplineManipulator reader = null;
@@ -201,17 +206,17 @@ public class DisciplineManipulator {
 			mapDisciplineCodeAndResult.remove(courseDiscipline.getCode());
 		});
 		HashMap<String, DisciplineResultEnum> hele = new HashMap<>();
-		/*hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
+		hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
 		hele.put("TIN0152", mapDisciplineCodeAndResult.get("TIN0152"));
 		hele.put("TIN0153", mapDisciplineCodeAndResult.get("TIN0153"));
-		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));*/
+		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));
 		ArrayList<String> ele = new ArrayList<>();
 		hele.keySet().forEach(key -> ele.add(key));
 		
-		/*hele.remove("TIN0151");
+		hele.remove("TIN0151");
 		hele.remove("TIN0152");
 		hele.remove("TIN0153");
-		hele.remove("TIN0154");*/
+		hele.remove("TIN0154");
 
 		studentDisciplines.forEach(d -> {
 			if (isEletiva(d)) {
