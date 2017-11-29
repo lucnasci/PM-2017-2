@@ -1,7 +1,7 @@
 package enums;
 
 public enum DisciplineResultColorEnum {
-	APROVADO("#94EF00"), REPROVADO("#FF1800"), MATRICULA("#FFDA00");
+	APROVADO("#94EF00"), REPROVADO("#FF1800"), MATRICULA("#FFDA00"), NAO_CURSADA("#FFF");
 
 	private String text;
 
