@@ -1,0 +1,9 @@
+- Metodos possuem javadoc
+- Variáveis com nomes significativos
+- Código identado corretamente
+- Javadoc identado corretamente
+- Metodos já implementados pela linguagem (desnecessários)
+- Metodos sendo chamados mais de uma vez que poderiam ser variáveis (reduzir número de chamadas)
+- Metodos com mais de uma responsabilidade
+- Metodos com nomes significativos
+
