@@ -13,35 +13,26 @@ public class StudentManipulator {
 	};
 
 	/**
-	 * @return an instance of StudentManipulator, if it's the first time it
-	 *         is called than the instance is instantiated.
+	 * @return an instance of StudentManipulator, if it's the first time it is
+	 *         called than the instance is instantiated.
 	 */
 	public static StudentManipulator getInstance() {
 		if (studentManipulator == null)
 			studentManipulator = new StudentManipulator();
 		return studentManipulator;
 	}
-	
+
 	/**
 	 * @param studentRecordPdf
-	 *            Path of the student record PDF file to be read and extract
-	 *            text.
-	 * @return A Student object, created with the info collected from the
-	 *         student record PDF file.
+	 *            Path of the student record PDF file to be read and extract text.
+	 * @return A Student object, created with the info collected from the student
+	 *         record PDF file.
 	 * @throws IOException
 	 */
 	public float getStudentFromRecord(String studentRecordPdf) throws IOException {
 		ArrayList<String> studentRecordTextLines = PdfManipulator.getInstance().extractTextFromPdf(studentRecordPdf);
 
-		return getCumulativeYieldCoefficient(
-				studentRecordTextLines);/*
-								 * new
-								 * Student(getRegistrationCode(studentRecord),
-								 * getAdmissionYear(studentRecord),
-								 * getAdmissionSemester(studentRecord),
-								 * calculateCumulativeYieldCoefficient(
-								 * studentRecord));
-								 */
+		return getCumulativeYieldCoefficient(studentRecordTextLines);
 	}
 
 	/**
@@ -54,12 +45,11 @@ public class StudentManipulator {
 		ArrayList<String> registrationCodeTextLine = new ArrayList<>();
 
 		for (String studentRecordTextLine : studentRecordTextLines) {
-			if (studentRecordTextLine.contains("Matrícula: ")) {
+			if (studentRecordTextLine.contains("Matrï¿½cula: ")) {
 				registrationCodeTextLine.add(studentRecordTextLine);
 				break;
 			}
 		}
-
 		String[] registrationCodeTextLineSubstrings = registrationCodeTextLine.get(0).split(" ", -1);
 		String registrationCode = registrationCodeTextLineSubstrings[1];
 
@@ -89,15 +79,17 @@ public class StudentManipulator {
 
 		return Integer.parseInt(admissionSemester);
 	}
-	
+
 	private float getCumulativeYieldCoefficient(ArrayList<String> studentRecordTextLines) {
 		ArrayList<String> studentGradesTextLines = new ArrayList<>();
 		float cumulativeYieldCoefficient = 0;
-		
+
 		for (String studentRecordTextLine : studentRecordTextLines) {
 			if (stringBeginsWithDisciplineCode(studentRecordTextLine)) {
-				if (!studentRecordTextLine.contains("Atividades Curriculares") && !studentRecordTextLine.contains("Dispensa sem nota")
-						&& !studentRecordTextLine.contains("ASC - Matrícula") && !studentRecordTextLine.contains("TRA - Trancamento")) {
+				if (!studentRecordTextLine.contains("Atividades Curriculares")
+						&& !studentRecordTextLine.contains("Dispensa sem nota")
+						&& !studentRecordTextLine.contains("ASC - Matrï¿½cula")
+						&& !studentRecordTextLine.contains("TRA - Trancamento")) {
 					studentGradesTextLines.add(studentRecordTextLine);
 				}
 			}
@@ -126,8 +118,8 @@ public class StudentManipulator {
 	/**
 	 * @param text
 	 *            String where the pattern of discipline code will be searched.
-	 * @return true if the beginning of String matches the pattern (3 characters
-	 *         and 4 digits), otherwise, returns false.
+	 * @return true if the beginning of String matches the pattern (3 characters and
+	 *         4 digits), otherwise, returns false.
 	 */
 	public static boolean stringBeginsWithDisciplineCode(String text) {
 		if (text.length() >= 7) {
