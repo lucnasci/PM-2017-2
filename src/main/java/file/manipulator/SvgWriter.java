@@ -20,6 +20,10 @@ public class SvgWriter {
 		return writer;
 	}
 
+	/**
+	 * @param docToWrite
+	 * Receives a document and save in the path "src/resources/test.svg"
+	 */
 	public void writeSvgDoc(Document docToWrite) {
 		// Generate Output File
 		String savepath = "src/resources/test.svg";
@@ -51,22 +55,27 @@ public class SvgWriter {
 		}
 	}
 	
-	public static byte[] transcodeToSVG(Document doc) throws TranscoderException {
+	/**
+	 * @param document
+	 * @return 
+	 * @throws TranscoderException
+	 */
+	public static byte[] transcodeToSVG(Document document) throws TranscoderException {
 
 	    try {
 	        //Determine output type:
-	        SVGTranscoder t = new SVGTranscoder();
+	        SVGTranscoder transcoder = new SVGTranscoder();
 
 	        //Set transcoder input/output
-	        TranscoderInput input = new TranscoderInput(doc);
+	        TranscoderInput transcoderInput = new TranscoderInput(document);
 	        ByteArrayOutputStream bytestream = new ByteArrayOutputStream();
-	        OutputStreamWriter ostream = new OutputStreamWriter(bytestream, "UTF-8");
-	        TranscoderOutput output = new TranscoderOutput(ostream);
+	        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(bytestream, "UTF-8");
+	        TranscoderOutput transcoderOutput = new TranscoderOutput(outputStreamWriter);
 
 	        //Perform transcoding
-	        t.transcode(input, output);
-	        ostream.flush();
-	        ostream.close();
+	        transcoder.transcode(transcoderInput, transcoderOutput);
+	        outputStreamWriter.flush();
+	        outputStreamWriter.close();
 
 	        return bytestream.toByteArray();
 

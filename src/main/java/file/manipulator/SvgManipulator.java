@@ -21,12 +21,21 @@ public class SvgManipulator {
 		return manipulator;
 	}
 
+	/**
+	 * @param path
+	 * @return a document from the given path to a svg file
+	 */
 	public Document getDocumentFromSvgPath(String path) {
 		return reader.getDocFromSvgPath(path);
 	}
 
+	/**
+	 * @param documentToEdit
+	 * @param discipline
+	 * Paint the discipline code according to the discipline result
+	 */
 	public void paintDiscipine(Document documentToEdit, Discipline discipline) {
-		String color = "#FFF";
+		String color = null;
 		DisciplineResultEnum disciplineSituation = discipline.getSituation();
 		if (disciplineSituation != null) {
 			switch (disciplineSituation) {
@@ -42,17 +51,28 @@ public class SvgManipulator {
 				color = DisciplineResultColorEnum.MATRICULA.getText();
 				break;
 			default:
+				color = DisciplineResultColorEnum.NAO_CURSADA.getText();
 				break;
 			}
 		}
 		editSvgPathColor(documentToEdit, discipline.getCode(), color);
 	}
 
-	public void editSvgPathColor(Document docToEdit, String pathId, String color) {
-		docToEdit.getElementById(pathId).setAttribute("style", "fill:" + color
+	/**
+	 * @param documentToEdit
+	 * @param pathId
+	 * @param color
+	 * Edit the color of the node according to the given color and pathId
+	 */
+	public void editSvgPathColor(Document documentToEdit, String pathId, String color) {
+		documentToEdit.getElementById(pathId).setAttribute("style", "fill:" + color
 				+ ";fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1");
 	}
 
+	/**
+	 * @param docToWrite
+	 * Receives a document and save in the path "src/resources/test.svg"
+	 */
 	public void writeSvgDoc(Document docToWrite) {
 		writer.writeSvgDoc(docToWrite);
 	}
