@@ -1,6 +1,7 @@
 import java.io.IOException;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import org.w3c.dom.Document;
 
@@ -19,8 +20,12 @@ public class Main {
 		String svgPath = "src/resources/grade_curricular.svg";
 
 		// System.out.println(pdfManipulator.extractTextFromPdf("src/resources/file_2.pdf"));
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Entre com o nome do arquivo: ");
+		String fileName = "src/resources/" + scanner.nextLine();
 
-		Student student = studentManipulator.getStudentFromRecord("src/resources/file_2.pdf");
+		Student student = studentManipulator.getStudentFromRecord(fileName);
 		StudentVerificator studentVerificator = StudentVerificator.getInstance();
 		studentVerificator
 				.verifyStudentAccumulatedEfficiencyCoefficientSituation(student.getAccumulatedEfficiencyCoefficient());
@@ -28,7 +33,7 @@ public class Main {
 
 		ArrayList<Discipline> courseDisciplines = disciplineManipulator.getListOfDisciplinesBasedOnSvg(svgPath);
 		ArrayList<Discipline> studentDisciplines = disciplineManipulator
-				.getDisciplinesFromDisciplineRecord(courseDisciplines, "src/resources/file_2.pdf");
+				.getDisciplinesFromDisciplineRecord(courseDisciplines, fileName);
 		SvgManipulator svgManipulator = SvgManipulator.getInstance();
 		Document document = svgManipulator.getDocumentFromSvgPath(svgPath);
 		studentDisciplines.forEach(discipline -> svgManipulator.paintDiscipine(document, discipline));
