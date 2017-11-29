@@ -24,13 +24,13 @@ public class Main {
 		
 		System.out.println(studentManipulator.getStudentFromRecord("src/resources/file_2.pdf"));
 		
-		/*ArrayList<Discipline> courseDisciplines = disciplineManipulator.getListOfDisciplinesBasedOnSvg(svgPath);
+		ArrayList<Discipline> courseDisciplines = disciplineManipulator.getListOfDisciplinesBasedOnSvg(svgPath);
 		ArrayList<Discipline> studentDisciplines = disciplineManipulator
 				.getDisciplinesFromDisciplineRecord(courseDisciplines, "src/resources/file_2.pdf");
 		studentDisciplines.forEach(d -> System.out.println(d.getCode() + ": " + d.getSituation()));
 		SvgManipulator svgManipulator = SvgManipulator.getInstance();
 		Document doc = svgManipulator.getDocumentFromSvgPath(svgPath);
 		studentDisciplines.forEach(d -> svgManipulator.paintDiscipine(doc, d));
-		svgManipulator.writeSvgDoc(doc);*/
+		svgManipulator.writeSvgDoc(doc);
 	}
 }

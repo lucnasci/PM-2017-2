@@ -35,7 +35,7 @@ public class SvgManipulator {
 	 * Paint the discipline code according to the discipline result
 	 */
 	public void paintDiscipine(Document documentToEdit, Discipline discipline) {
-		String color = null;
+		String color;
 		DisciplineResultEnum disciplineSituation = discipline.getSituation();
 		if (disciplineSituation != null) {
 			switch (disciplineSituation) {
@@ -54,6 +54,8 @@ public class SvgManipulator {
 				color = DisciplineResultColorEnum.NAO_CURSADA.getText();
 				break;
 			}
+		}else{
+			color = DisciplineResultColorEnum.NAO_CURSADA.getText();
 		}
 		editSvgPathColor(documentToEdit, discipline.getCode(), color);
 	}
