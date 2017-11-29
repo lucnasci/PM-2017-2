@@ -10,6 +10,8 @@ import java.util.regex.Pattern;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import enums.DisciplineResultEnum;
 
@@ -23,8 +25,8 @@ public class DisciplineManipulator {
 	};
 
 	/**
-	 * @return an instance of DisciplineManipulator, if it's the first time it
-	 *         is called than the instance is instantiated.
+	 * @return an instance of DisciplineManipulator, if it's the first time it is
+	 *         called than the instance is instantiated.
 	 */
 	public static DisciplineManipulator getInstance() {
 		if (disciplineManipulator == null)
@@ -38,18 +40,18 @@ public class DisciplineManipulator {
 	 * @return an array list of strings containg data about the disciplines, in the
 	 *         bellow pattern</br>
 	 *         DISCIPLINE_CODE DISCIPLINE_NAME DISCIPLINE_RESULT DISCIPLINE_SEMESTER
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	public ArrayList<String> getListOfDisciplines(String pdfPath) throws IOException {
 		ArrayList<String> documentLines = new ArrayList<>();
 		ArrayList<String> lines = PdfManipulator.getInstance().extractTextFromPdf(pdfPath);
 		int semesterCount = 0;
 		for (String line : lines) {
-			if (line.contains("semestre de")) {
+			if (lineRefersToSemester(line)) {
 				semesterCount++;
 			}
 			if (stringBeginsWithDisciplineCode(line)) {
-				line = semesterCount + "º Periodo - " + line;
+				line = semesterCount + "ï¿½ Periodo - " + line;
 				documentLines.add(line);
 			}
 		}
@@ -60,9 +62,10 @@ public class DisciplineManipulator {
 	 * @param disciplineRecordPath
 	 *            to a pdf file with the students Discipline Record
 	 * @return
-	 * @throws IOException 
+	 * @throws IOException
 	 */
-	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String disciplineRecordPath) throws IOException {
+	public Map<String, DisciplineResultEnum> getMapOfDisciplinesAndResult(String disciplineRecordPath)
+			throws IOException {
 		Map<String, DisciplineResultEnum> documentLines = new HashMap<>();
 		ArrayList<String> lines = PdfManipulator.getInstance().extractTextFromPdf(disciplineRecordPath);
 		for (String line : lines) {
@@ -95,24 +98,24 @@ public class DisciplineManipulator {
 	}
 
 	/**
-	 * @param line
+	 * @param enteredLine
 	 * @return if the 7 first letters of the line make a disciplineCode (PATTERN: 3
 	 *         characthers and 4 integers) return this code
 	 */
-	public String getDisciplineCode(String line) {
-		if (stringBeginsWithDisciplineCode(line))
-			return line.substring(0, 7);
+	public String getDisciplineCode(String enteredLine) {
+		if (stringBeginsWithDisciplineCode(enteredLine))
+			return enteredLine.substring(0, 7);
 		return null;
 	}
 
 	/**
-	 * @param line
+	 * @param enteredLine
 	 * @return if the entered line referes to a discipline gets the result
 	 */
-	public DisciplineResultEnum getDisciplineResult(String line) {
-		if (stringBeginsWithDisciplineCode(line)) {
+	public DisciplineResultEnum getDisciplineResult(String enteredLine) {
+		if (stringBeginsWithDisciplineCode(enteredLine)) {
 			for (DisciplineResultEnum result : DisciplineResultEnum.values()) {
-				if (containsIgnoreCase(line, result.getText())) {
+				if (containsIgnoreCase(enteredLine, result.getText())) {
 					return result;
 				}
 			}
@@ -121,41 +124,41 @@ public class DisciplineManipulator {
 	}
 
 	/**
-	 * @param line
+	 * @param enteredLine
 	 * @return if the line refers to a semester. To do so the line must containt the
 	 *         string "semestre de"
 	 */
-	public boolean lineRefersToSemester(String line) {
-		return containsIgnoreCase(line, "semestre de");
+	public boolean lineRefersToSemester(String enteredLine) {
+		return containsIgnoreCase(enteredLine, "semestre de");
 	}
 
 	/**
 	 * Methods goes throught the line from the end to the begining checking if there
 	 * is a sequence of characters same as the result text
 	 * 
-	 * @param line
+	 * @param enteredLine
 	 * @param result
 	 * @return if there is a sequence of characters same as the result text
 	 */
-	public boolean stringHasResult(String line, DisciplineResultEnum result) {
-		return (containsIgnoreCase(line, result.getText()));
+	public boolean stringHasResult(String enteredLine, DisciplineResultEnum result) {
+		return (containsIgnoreCase(enteredLine, result.getText()));
 	}
 
 	/**
-	 * @param text
+	 * @param enteredLine
 	 *            String where the pattern of discipline code will be searched.
-	 * @return true if the beginning of String matches the pattern (3 characters
-	 *         and 4 digits), otherwise, returns false.
+	 * @return true if the beginning of String matches the pattern (3 characters and
+	 *         4 digits), otherwise, returns false.
 	 */
-	public static boolean stringBeginsWithDisciplineCode(String text) {
-		if (text.length() >= 7) {
+	public static boolean stringBeginsWithDisciplineCode(String enteredLine) {
+		if (enteredLine.length() >= 7) {
 			for (int index = 0; index < 3; index++) {
-				char character = text.charAt(index);
+				char character = enteredLine.charAt(index);
 				if (!Character.isAlphabetic(character))
 					return false;
 			}
 			for (int index = 3; index < 7; index++) {
-				char character = text.charAt(index);
+				char character = enteredLine.charAt(index);
 				if (!Character.isDigit(character))
 					return false;
 			}
@@ -172,66 +175,109 @@ public class DisciplineManipulator {
 	public ArrayList<Discipline> getListOfDisciplinesBasedOnSvg(String svgPath) {
 		SvgManipulator svgManipulator = SvgManipulator.getInstance();
 		Document gradeCurricularDocument = svgManipulator.getDocumentFromSvgPath(svgPath);
+		NodeList gradeCurricularDocumentElements = gradeCurricularDocument.getElementsByTagName("path");
 		ArrayList<Discipline> disciplines = new ArrayList<>();
-		for (int index = 0; index < gradeCurricularDocument.getElementsByTagName("path").getLength(); index++) {
-			Element node = (Element) gradeCurricularDocument.getElementsByTagName("path").item(index);
+		for (int index = 0; index < gradeCurricularDocumentElements.getLength(); index++) {
+			Element node = (Element) gradeCurricularDocumentElements.item(index);
 			for (int nodeIndex = 0; nodeIndex < node.getAttributes().getLength(); nodeIndex++) {
-				if (node.getAttributes().item(nodeIndex).getNodeName().equals("id")) {
-					String nodeTextContent = node.getAttributes().item(nodeIndex).getTextContent();
-					if (stringBeginsWithDisciplineCode(nodeTextContent)) {
-						disciplines.add(new Discipline(nodeTextContent, null));
-					} else if (stringRefersToOptionalDiscipline(nodeTextContent)) {
-						disciplines.add(new Discipline(nodeTextContent, null));
-					} else if (stringRefersToElectiveDiscipline(nodeTextContent)) {
-						disciplines.add(new Discipline(nodeTextContent, null));
-					}
+				Node loopNode = node.getAttributes().item(nodeIndex);
+				Discipline nodeDiscipline = createDisciplineBasedOnNode(loopNode);
+				if (nodeDiscipline != null) {
+					disciplines.add(nodeDiscipline);
 				}
 			}
 		}
 		return disciplines;
 	}
 
+	/**
+	 * @param node
+	 * @return a discipline with the nodeName, if the node has a name and it begins
+	 *         with a discipline code.If not returns null
+	 */
+	private Discipline createDisciplineBasedOnNode(Node node) {
+		if (node.getNodeName().equalsIgnoreCase("id")) {
+			String nodeTextContent = node.getTextContent();
+			if (stringBeginsWithDisciplineCode(nodeTextContent)) {
+				return new Discipline(nodeTextContent);
+			} else if (stringRefersToOptionalDiscipline(nodeTextContent)) {
+				return new Discipline(nodeTextContent);
+			} else if (stringRefersToElectiveDiscipline(nodeTextContent)) {
+				return new Discipline(nodeTextContent);
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * 
+	 * @param nodeTextContent
+	 * @return if the nodeTextContentRefersToADiscipline 'optativa'
+	 */
 	private boolean stringRefersToOptionalDiscipline(String nodeTextContent) {
 		return nodeTextContent.contains("OPTATIVA");
 	}
 
+	/**
+	 * 
+	 * @param nodeTextContent
+	 * @return if the nodeTextContentRefersToADiscipline 'eletiva'
+	 */
 	private boolean stringRefersToElectiveDiscipline(String nodeTextContent) {
 		return nodeTextContent.contains("ELETIVA");
 	}
 
 	public ArrayList<Discipline> getDisciplinesFromDisciplineRecord(ArrayList<Discipline> courseDisciplines,
 			String pdfPath) throws IOException {
-		
-		
+
 		Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult = getMapOfDisciplinesAndResult(pdfPath);
 		ArrayList<Discipline> studentDisciplines = getStudentDisciplinesWithResults(courseDisciplines,
 				mapDisciplineCodeAndResult);
-		
-		HashMap<String, DisciplineResultEnum> hele = new HashMap<>();
-		hele.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
-		hele.put("TIN0152", mapDisciplineCodeAndResult.get("TIN0152"));
-		hele.put("TIN0153", mapDisciplineCodeAndResult.get("TIN0153"));
-		hele.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));
-		ArrayList<String> ele = new ArrayList<>();
-		hele.keySet().forEach(key -> ele.add(key));
+		setEletivaDisciplinesResult(studentDisciplines, mapDisciplineCodeAndResult);
+		setOptativaDisciplinesResult(studentDisciplines, mapDisciplineCodeAndResult);
+		return studentDisciplines;
+	}
 
-		studentDisciplines.forEach(studentDiscipline -> {
+	/**
+	 * If the entered discipline list has eletiva then the results are setted
+	 * 
+	 * @param disciplines
+	 * @param pdfPath
+	 */
+	public void setEletivaDisciplinesResult(ArrayList<Discipline> disciplines,
+			Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult) {
+		HashMap<String, DisciplineResultEnum> mapEletiva = new HashMap<>();
+		mapEletiva.put("TIN0151", mapDisciplineCodeAndResult.get("TIN0151"));
+		mapEletiva.put("TIN0152", mapDisciplineCodeAndResult.get("TIN0152"));
+		mapEletiva.put("TIN0153", mapDisciplineCodeAndResult.get("TIN0153"));
+		mapEletiva.put("TIN0154", mapDisciplineCodeAndResult.get("TIN0154"));
+		ArrayList<String> eletivaList = new ArrayList<>();
+		mapEletiva.keySet().forEach(key -> eletivaList.add(key));
+
+		disciplines.forEach(studentDiscipline -> {
 			if (isEletiva(studentDiscipline)) {
 				if (!studentDiscipline.getSituation().equals(DisciplineResultEnum.APROVADO)) {
-					if (ele.size() > 0 && hele.size() > 0) {
-						String o = ele.get(0);
-						studentDiscipline.setSituation(hele.get(o));
-						hele.remove(o);
-						ele.remove(0);
+					if (eletivaList.size() > 0 && mapEletiva.size() > 0) {
+						String o = eletivaList.get(0);
+						studentDiscipline.setSituation(mapEletiva.get(o));
+						mapEletiva.remove(o);
+						eletivaList.remove(0);
 					}
 				}
 			}
 		});
-		
-		
+	}
+
+	/**
+	 * If the entered discipline list has optativa then the results are setted
+	 * @param disciplines
+	 * @param mapDisciplineCodeAndResult
+	 */
+	public void setOptativaDisciplinesResult(ArrayList<Discipline> disciplines,
+			Map<String, DisciplineResultEnum> mapDisciplineCodeAndResult) {
 		ArrayList<String> opt = new ArrayList<>();
 		mapDisciplineCodeAndResult.keySet().forEach(key -> opt.add(key));
-		studentDisciplines.forEach(d -> {
+		disciplines.forEach(d -> {
 			if (isOptativa(d)) {
 				if (!d.getSituation().equals(DisciplineResultEnum.APROVADO)) {
 					if (opt.size() > 0 && mapDisciplineCodeAndResult.size() > 0) {
@@ -243,24 +289,32 @@ public class DisciplineManipulator {
 				}
 			}
 		});
-		return studentDisciplines;
-	}
-	
-	public boolean isEletiva(Discipline discipline) {
-		if (discipline.getCode().contains("ELETIVA"))
-			return true;
-		return false;
 	}
 
-	public boolean isOptativa(Discipline discipline) {
-		if (discipline.getCode().contains("OPTATIVA"))
+	/**
+	 * @param discipline
+	 * @return if the discipline code contains text refereing to elective
+	 */
+	public boolean isEletiva(Discipline discipline) {
+		if (stringRefersToElectiveDiscipline(discipline.getCode()))
 			return true;
 		return false;
 	}
 
 	/**
-	 * Receives a list of the course's disciplines, a map with the discipline code and result
-	 * and returns a list with instanced disciplines
+	 * @param discipline
+	 * @return if the discipline code contains text refereing to optional
+	 */
+	public boolean isOptativa(Discipline discipline) {
+		if (stringRefersToOptionalDiscipline(discipline.getCode()))
+			return true;
+		return false;
+	}
+
+	/**
+	 * Receives a list of the course's disciplines, a map with the discipline code
+	 * and result and returns a list with instanced disciplines
+	 * 
 	 * @param courseDisciplines
 	 * @param mapDisciplineCodeAndResult
 	 * @return a list of instanced disciplines
