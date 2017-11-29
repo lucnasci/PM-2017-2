@@ -1,32 +1,35 @@
 package file.manipulator;
+
 import org.w3c.dom.Document;
 
 import enums.DisciplineResultColorEnum;
 import enums.DisciplineResultEnum;
+
 import model.Discipline;
 
 public class SvgManipulator {
 
-	private static SvgReader reader;
-	private static SvgWriter writer;
-	private static SvgManipulator manipulator = null;
+	private static SvgReader svgReader;
+	private static SvgWriter svgWriter;
+	private static SvgManipulator svgManipulator = null;
 
 	public static SvgManipulator getInstance() {
-		if (reader == null)
-			reader = SvgReader.getInstance();
-		if (writer == null)
-			writer = SvgWriter.getInstance();
-		if (manipulator == null)
-			manipulator = new SvgManipulator();
-		return manipulator;
+		if (svgReader == null)
+			svgReader = SvgReader.getInstance();
+		if (svgWriter == null)
+			svgWriter = SvgWriter.getInstance();
+		if (svgManipulator == null)
+			svgManipulator = new SvgManipulator();
+		return svgManipulator;
 	}
 
 	/**
-	 * @param path
-	 * @return a document from the given path to a svg file
+	 * @param svgPath
+	 *            Path of the SVG file to be edited.
+	 * @return A document from the given SVG file.
 	 */
-	public Document getDocumentFromSvgPath(String path) {
-		return reader.getDocFromSvgPath(path);
+	public Document getDocumentFromSvgPath(String svgPath) {
+		return svgReader.getDocFromSvgPath(svgPath);
 	}
 
 	/**
@@ -76,6 +79,6 @@ public class SvgManipulator {
 	 * Receives a document and save in the path "src/resources/test.svg"
 	 */
 	public void writeSvgDoc(Document docToWrite) {
-		writer.writeSvgDoc(docToWrite);
+		svgWriter.writeSvgDoc(docToWrite);
 	}
 }

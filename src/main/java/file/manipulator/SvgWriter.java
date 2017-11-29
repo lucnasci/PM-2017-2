@@ -1,4 +1,5 @@
 package file.manipulator;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -9,15 +10,16 @@ import org.apache.batik.transcoder.TranscoderException;
 import org.apache.batik.transcoder.TranscoderInput;
 import org.apache.batik.transcoder.TranscoderOutput;
 import org.apache.batik.transcoder.svg2svg.SVGTranscoder;
+
 import org.w3c.dom.Document;
 
 public class SvgWriter {
-	private static SvgWriter writer = null;
+	private static SvgWriter svgWriter = null;
 
 	public static SvgWriter getInstance() {
-		if (writer == null)
-			writer = new SvgWriter();
-		return writer;
+		if (svgWriter == null)
+			svgWriter = new SvgWriter();
+		return svgWriter;
 	}
 
 	/**
@@ -83,8 +85,7 @@ public class SvgWriter {
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	    }
-
+	    
 	    return null;
 	}
-
 }

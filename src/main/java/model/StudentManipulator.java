@@ -13,26 +13,29 @@ public class StudentManipulator {
 	};
 
 	/**
-	 * @return an instance of StudentManipulator, if it's the first time it is
-	 *         called than the instance is instantiated.
+	 * @return an instance of StudentManipulator, if it's the first time it
+	 *         is called than the instance is instantiated.
 	 */
 	public static StudentManipulator getInstance() {
 		if (studentManipulator == null)
 			studentManipulator = new StudentManipulator();
 		return studentManipulator;
 	}
-
+	
 	/**
 	 * @param studentRecordPdf
-	 *            Path of the student record PDF file to be read and extract text.
-	 * @return A Student object, created with the info collected from the student
-	 *         record PDF file.
+	 *            Path of the student record PDF file to be read and extract
+	 *            text.
+	 * @return A Student object, created with the info collected from the
+	 *         student record PDF file.
 	 * @throws IOException
 	 */
-	public float getStudentFromRecord(String studentRecordPdf) throws IOException {
+	public Student getStudentFromRecord(String studentRecordPdf) throws IOException {
 		ArrayList<String> studentRecordTextLines = PdfManipulator.getInstance().extractTextFromPdf(studentRecordPdf);
 
-		return getCumulativeYieldCoefficient(studentRecordTextLines);
+		return new Student(getRegistrationCode(studentRecordTextLines), getAdmissionYear(studentRecordTextLines),
+				getAdmissionSemester(studentRecordTextLines), getSemestersTaken(studentRecordTextLines),
+				getAccumulatedEfficiencyCoefficient(studentRecordTextLines));
 	}
 
 	/**
@@ -45,11 +48,12 @@ public class StudentManipulator {
 		ArrayList<String> registrationCodeTextLine = new ArrayList<>();
 
 		for (String studentRecordTextLine : studentRecordTextLines) {
-			if (studentRecordTextLine.contains("Matrï¿½cula: ")) {
+			if (studentRecordTextLine.contains("Matrícula: ")) {
 				registrationCodeTextLine.add(studentRecordTextLine);
 				break;
 			}
 		}
+
 		String[] registrationCodeTextLineSubstrings = registrationCodeTextLine.get(0).split(" ", -1);
 		String registrationCode = registrationCodeTextLineSubstrings[1];
 
@@ -60,7 +64,7 @@ public class StudentManipulator {
 	 * @param studentRecordTextLines
 	 *            ArrayList containing the text lines, in String format, of the
 	 *            student record PDF file.
-	 * @return A int containing the student admission year.
+	 * @return A integer containing the student admission year.
 	 */
 	private int getAdmissionYear(ArrayList<String> studentRecordTextLines) {
 		String admissionYear = getRegistrationCode(studentRecordTextLines).substring(0, 4);
@@ -72,32 +76,88 @@ public class StudentManipulator {
 	 * @param studentRecordTextLines
 	 *            ArrayList containing the text lines, in String format, of the
 	 *            student record PDF file.
-	 * @return A int containing the student admission semester, 1 or 2.
+	 * @return A integer containing the student admission semester, with 1 or 2
+	 *         as possible result.
 	 */
 	private int getAdmissionSemester(ArrayList<String> studentRecordTextLines) {
 		String admissionSemester = getRegistrationCode(studentRecordTextLines).substring(4, 5);
 
 		return Integer.parseInt(admissionSemester);
 	}
+	
+	/**
+	 * @param studentRecordTextLines
+	 *            ArrayList containing the text lines, in String format, of the
+	 *            student record PDF file.
+	 * @return A integer containing the number of semesters that the student has
+	 *         taken.
+	 */
+	private int getSemestersTaken(ArrayList<String> studentRecordTextLines) {
+		ArrayList<String> semestersTakenTextLine = new ArrayList<>();
 
-	private float getCumulativeYieldCoefficient(ArrayList<String> studentRecordTextLines) {
+		for (String studentRecordTextLine : studentRecordTextLines) {
+			if (studentRecordTextLine.contains("Período Atual:")) {
+				semestersTakenTextLine.add(studentRecordTextLine);
+				break;
+			}
+		}
+
+		String[] semestersTakenTextLineSubstrings = semestersTakenTextLine.get(0).split(" ", -1);
+		String semestersTaken = String.valueOf(semestersTakenTextLineSubstrings[2].charAt(0));
+
+		return Integer.parseInt(semestersTaken);
+	}
+	
+	/**
+	 * @param studentRecordTextLines
+	 *            ArrayList containing the text lines, in String format, of the
+	 *            student record PDF file.
+	 * @return A float containing the student accumulated efficiency coefficient
+	 *         (CRA).
+	 */
+	private float getAccumulatedEfficiencyCoefficient(ArrayList<String> studentRecordTextLines) {
 		ArrayList<String> studentGradesTextLines = new ArrayList<>();
-		float cumulativeYieldCoefficient = 0;
 
 		for (String studentRecordTextLine : studentRecordTextLines) {
 			if (stringBeginsWithDisciplineCode(studentRecordTextLine)) {
 				if (!studentRecordTextLine.contains("Atividades Curriculares")
 						&& !studentRecordTextLine.contains("Dispensa sem nota")
-						&& !studentRecordTextLine.contains("ASC - Matrï¿½cula")
+						&& !studentRecordTextLine.contains("ASC - Matrícula")
 						&& !studentRecordTextLine.contains("TRA - Trancamento")) {
 					studentGradesTextLines.add(studentRecordTextLine);
 				}
 			}
 		}
 
-		return 0;
+		return calculateAccumulatedEfficiencyCoefficient(studentGradesTextLines);
+	}
+	
+	/**
+	 * @param studentGradesTextLines
+	 *            ArrayList containing only the text lines, in String format,
+	 *            about the disciplines that influence on the accumulated
+	 *            efficiency coefficient.
+	 * @return A float containing the student accumulated efficiency coefficient
+	 *         (CRA).
+	 */
+	private float calculateAccumulatedEfficiencyCoefficient(ArrayList<String> studentGradesTextLines) {
+		float disciplineGradesSum = 0;
+		float disciplineCreditsSum = 0;
+
+		for (String studentGradesTextLine : studentGradesTextLines) {
+			disciplineGradesSum += getStudentGrade(studentGradesTextLine) * getDisciplineCredit(studentGradesTextLine);
+			disciplineCreditsSum += getDisciplineCredit(studentGradesTextLine);
+		}
+
+		return disciplineGradesSum / disciplineCreditsSum;
 	}
 
+	/**
+	 * @param studentGradesTextLine
+	 *            A String containing info about a discipline that influence on
+	 *            the accumulated efficiency coefficient.
+	 * @return A integer containing the discipline credit value.
+	 */
 	private int getDisciplineCredit(String studentGradesTextLine) {
 		String[] studentGradesTextLineSubstrings = studentGradesTextLine.split(",", 2);
 		studentGradesTextLineSubstrings = studentGradesTextLineSubstrings[0].split(" ", -1);
@@ -106,6 +166,13 @@ public class StudentManipulator {
 		return Integer.valueOf(disciplineCredit);
 	}
 
+	/**
+	 * @param studentGradesTextLine
+	 *            A String containing info about a discipline that influence on
+	 *            the accumulated efficiency coefficient.
+	 * @return A float containing the student grade on the respective
+	 *         discipline.
+	 */
 	private float getStudentGrade(String studentGradesTextLine) {
 		String[] studentGradesTextLineSubstrings = studentGradesTextLine.split(",", 2);
 		String studentGradeText = studentGradesTextLineSubstrings[0]
@@ -114,14 +181,18 @@ public class StudentManipulator {
 
 		return Float.parseFloat(studentGradeText);
 	}
+	
+	private int getStudentMatriculatedDisciplinesNumber(){
+		return 0;
+	}
 
 	/**
 	 * @param text
 	 *            String where the pattern of discipline code will be searched.
-	 * @return true if the beginning of String matches the pattern (3 characters and
-	 *         4 digits), otherwise, returns false.
+	 * @return true if the beginning of String matches the pattern (3 characters
+	 *         and 4 digits), otherwise, returns false.
 	 */
-	public static boolean stringBeginsWithDisciplineCode(String text) {
+	private static boolean stringBeginsWithDisciplineCode(String text) {
 		if (text.length() >= 7) {
 			for (int index = 0; index < 3; index++) {
 				char character = text.charAt(index);

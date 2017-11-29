@@ -8,5 +8,6 @@ public class Student {
 	private String registrationCode;
 	private int admissionYear;
 	private int admissionSemester;
-	private float cumulativeYieldCoefficient;
+	private int semestersTaken;
+	private float accumulatedEfficiencyCoefficient;
 }

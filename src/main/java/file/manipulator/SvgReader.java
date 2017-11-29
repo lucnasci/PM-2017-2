@@ -1,28 +1,30 @@
 package file.manipulator;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import org.apache.batik.dom.svg.SAXSVGDocumentFactory;
 import org.apache.batik.util.XMLResourceDescriptor;
+
 import org.w3c.dom.Document;
 
 public class SvgReader {
-	private static SvgReader reader = null;
-	
+	private static SvgReader svgReader = null;
+
 	/**
-	 * @return an instance of SvgReader, if it's the first time
-	 * it is called than the instance is intantiaded
+	 * @return an instance of SvgReader, if it's the first time it is called
+	 *         than the instance is instantiated
 	 */
 	public static SvgReader getInstance() {
-		if (reader == null)
-			reader = new SvgReader();
-		return reader;
+		if (svgReader == null)
+			svgReader = new SvgReader();
+		return svgReader;
 	}
 
 	/**
 	 * @param svgPath
-	 * @return a document from the given path to a svg file
+	 * @return A document from the given path to a SVG file.
 	 */
 	public Document getDocFromSvgPath(String svgPath) {
 		// Load Template File (with embedded Fonts)
