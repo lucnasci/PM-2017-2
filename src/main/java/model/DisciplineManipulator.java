@@ -51,7 +51,7 @@ public class DisciplineManipulator {
 				semesterCount++;
 			}
 			if (stringBeginsWithDisciplineCode(line)) {
-				line = semesterCount + "� Periodo - " + line;
+				line = semesterCount + "º Periodo - " + line;
 				documentLines.add(line);
 			}
 		}
@@ -258,9 +258,10 @@ public class DisciplineManipulator {
 			if (isEletiva(studentDiscipline)) {
 				if (!studentDiscipline.getSituation().equals(DisciplineResultEnum.APROVADO)) {
 					if (eletivaList.size() > 0 && mapEletiva.size() > 0) {
-						String o = eletivaList.get(0);
-						studentDiscipline.setSituation(mapEletiva.get(o));
-						mapEletiva.remove(o);
+						String electiveDiscipline = eletivaList.get(0);
+						studentDiscipline.setSituation(
+								mapEletiva.get(electiveDiscipline) == null ? DisciplineResultEnum.NAO_CURSADA : mapEletiva.get(electiveDiscipline));
+						mapEletiva.remove(electiveDiscipline);
 						eletivaList.remove(0);
 					}
 				}
@@ -270,6 +271,7 @@ public class DisciplineManipulator {
 
 	/**
 	 * If the entered discipline list has optativa then the results are setted
+	 * 
 	 * @param disciplines
 	 * @param mapDisciplineCodeAndResult
 	 */
