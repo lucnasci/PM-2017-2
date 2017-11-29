@@ -1,5 +1,7 @@
 package model;
+
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,23 +12,24 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
 import enums.DisciplineResultEnum;
+
 import file.manipulator.PdfManipulator;
 import file.manipulator.SvgManipulator;
 
 public class DisciplineManipulator {
-	private static DisciplineManipulator reader = null;
+	private static DisciplineManipulator disciplineManipulator = null;
 
 	private DisciplineManipulator() {
 	};
 
 	/**
-	 * @return an instance of DisciplineRecordReader, if it's the first time it is
-	 *         called than the instance is intantiaded
+	 * @return an instance of DisciplineManipulator, if it's the first time it
+	 *         is called than the instance is instantiated.
 	 */
 	public static DisciplineManipulator getInstance() {
-		if (reader == null)
-			reader = new DisciplineManipulator();
-		return reader;
+		if (disciplineManipulator == null)
+			disciplineManipulator = new DisciplineManipulator();
+		return disciplineManipulator;
 	}
 
 	/**
@@ -139,19 +142,20 @@ public class DisciplineManipulator {
 	}
 
 	/**
-	 * @param line
-	 * @return if the begining of the line matches the pattern: 3 charachters and 4
-	 *         integers
+	 * @param text
+	 *            String where the pattern of discipline code will be searched.
+	 * @return true if the beginning of String matches the pattern (3 characters
+	 *         and 4 digits), otherwise, returns false.
 	 */
-	public static boolean stringBeginsWithDisciplineCode(String line) {
-		if (line.length() >= 7) {
+	public static boolean stringBeginsWithDisciplineCode(String text) {
+		if (text.length() >= 7) {
 			for (int index = 0; index < 3; index++) {
-				char character = line.charAt(index);
+				char character = text.charAt(index);
 				if (!Character.isAlphabetic(character))
 					return false;
 			}
 			for (int index = 3; index < 7; index++) {
-				char character = line.charAt(index);
+				char character = text.charAt(index);
 				if (!Character.isDigit(character))
 					return false;
 			}

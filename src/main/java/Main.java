@@ -18,11 +18,11 @@ public class Main {
 		
 		String svgPath = "src/resources/grade_curricular.svg";
 		
-		//System.out.println(pdfManipulator.extractTextFromPdf("src/resources/file.pdf"));
+		//System.out.println(pdfManipulator.extractTextFromPdf("src/resources/file_2.pdf"));
 		
-		Student student = studentManipulator.getStudentFromRecord("src/resources/file.pdf");
+		//Student student = studentManipulator.getStudentFromRecord("src/resources/file.pdf");
 		
-		System.out.println(student.getAdmissionSemester());
+		System.out.println(studentManipulator.getStudentFromRecord("src/resources/file_2.pdf"));
 		
 		/*ArrayList<Discipline> courseDisciplines = disciplineManipulator.getListOfDisciplinesBasedOnSvg(svgPath);
 		ArrayList<Discipline> studentDisciplines = disciplineManipulator
